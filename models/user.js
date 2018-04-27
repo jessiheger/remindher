@@ -1,6 +1,6 @@
-var mongoose = require('mongoose');
-var bcrypt = require('bcrypt');
-var Service = require('./service.js');
+var mongoose 	= require('mongoose');
+var bcrypt 		= require('bcrypt');
+var Service 	= require('./service.js');
 
 // define what a user looks like in the database
 var userSchema = new mongoose.Schema({

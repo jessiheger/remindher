@@ -1,5 +1,5 @@
 
-console.log("history.js is working");
+console.log("records.js is working");
 
 $(document).ready(function() {
 
@@ -8,7 +8,7 @@ $(document).ready(function() {
 	    // console.log($(this).attr('data-id'));
 	    $.ajax({
 	        method: 'DELETE',
-	        url: '/history/'+$(this).attr('data-id'),
+	        url: '/records/'+$(this).attr('data-id'),
 	        success: deleteServiceSuccess,
 	        error: deleteServiceError
 	    }).then(()=>{

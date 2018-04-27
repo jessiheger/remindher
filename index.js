@@ -55,7 +55,7 @@ app.get('/myservices', function(req, res) {
 app.use('/auth', require('./controllers/auth'));
 app.use('/find', require('./controllers/find'));
 app.use('/myservices', require('./controllers/myservices'));
-app.use('/history', require('./controllers/history'));
+app.use('/records', require('./controllers/records'));
 
 
 // Listen

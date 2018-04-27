@@ -5,27 +5,22 @@
 
 </head>
 <body>
-	<div class="container">
-	<h2>My Services</h2>
+	<h2>Add/Edit Services</h2>
+	<div class="container smallDiv">
+	<p class="context">Click on the name of a service to learn more about it, and/or click the associated button to add information about an upcoming or completed service! You'll find your list of saved services in My Records.</p>
 
 <!-- ANNUAL PHYSICAL EXAM -->
 <div class="form-group row">
-	<div class="col-md-4 offset-2 col-12">
-	    <!-- <a tabindex="0" role="button" data-container="body" class="btn btn-link btn-lg" data-toggle="popover" data-trigger="focus" data-placement="right" data-content="Annual preventive care visits are recommended for all healthy adults. Annual physicals may include screenings for diseases; assessing your risk for future problems; discussing lifestyle habits; and keeping vaccinations up to date.">Annual Physical Exam</a> -->
 
-	    <button id="button1">Physical Exam Info</button>
-	</div>
+<div class="col-sm-5 offset-2 col-12">
+	<img src="/../images/physical.png">
+	    <a tabindex="0" role="button" data-container="body" class="btn btn-link btn-lg serviceName" data-toggle="popover" data-trigger="focus" data-placement="right" data-content="Annual preventive care visits are recommended for all healthy adults. Annual physicals may include screenings for diseases; assessing your risk for future problems; discussing lifestyle habits; and keeping vaccinations up to date.">Annual Physical Exam</a>
+</div>
 
-		<div class="col-md-4 col-12">
-			<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#physicalModal">Add info about a Physical Exam</button>
+		<div class="col-sm-5 col-12">
+			<button type="button" class="add" data-toggle="modal" data-target="#physicalModal">Add info: Physical Exam</button>
 		</div>
 </div>
-<!-- <div class="form-group row"> -->
-	<div id="physicalDiv">
-		<p>Annual preventive care visits are recommended for all healthy adults. Annual physicals may include screenings for diseases; assessing your risk for future problems; discussing lifestyle habits; and keeping vaccinations up to date.</p>
-	</div>
-<!-- </div> -->
-
 
 <div class="modal fade" id="physicalModal" tabindex="-1" role="dialog" aria-labelledby="physicalModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-lg" role="document">
@@ -80,11 +75,13 @@
 
 <!-- HPV VACCINE  -->
 <div class="form-group row">
-	<div class="col-md-4 offset-2 col-12">
-		<a tabindex="0" role="button" data-container="body" class="btn btn-link btn-lg" data-toggle="popover" data-trigger="focus" data-placement="right" data-content="The HPV vaccine protects against cancers caused by human papillomavirus (HPV) infection, including but not limited to cancers of the cervix, vagina, and vulva. The vaccine involves 3 shots given over a 6-month period, and is recommended for young women through age 26, and young men through age 21.">HPV Vaccine</a>	
+	<div class="col-md-5 offset-2 col-12">
+			<img src="/../images/syringe.png">
+
+		<a tabindex="0" role="button" data-container="body" class="btn btn-link btn-lg serviceName" data-toggle="popover" data-trigger="focus" data-placement="right" data-content="The HPV vaccine protects against cancers caused by human papillomavirus (HPV) infection, including but not limited to cancers of the cervix, vagina, and vulva. The vaccine involves 3 shots given over a 6-month period, and is recommended for young women through age 26, and young men through age 21.">HPV Vaccine</a>	
 	</div>		
-	<div class="col-md-4 col-12">
-		<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#hpvModal">Add info about HPV Vaccine</button>
+	<div class="col-md-5 col-12">
+		<button type="button" class="add" data-toggle="modal" data-target="#hpvModal">Add info about HPV Vaccine</button>
 	</div>
 </div>
 
@@ -135,12 +132,14 @@
 
 <!-- PAP TEST -->
 <div class="form-group row">
-	<div class="col-md-4 offset-2 col-12">
-		<a tabindex="0" role="button" data-container="body" class="btn btn-link btn-lg" data-toggle="popover" data-trigger="focus" data-placement="right" data-content="Pap tests screen for abnormalities that could indicate pre- or early cervical cancer. Women ages 21-29 should receive a Pap test every 3 years. If you are over age 30 and your Pap smear and HPV test are normal, you only need a Pap smear every 5 years.">PAP Test</a>
+	<div class="col-md-5 offset-2 col-12">
+		<img src="/../images/body.png">
+
+		<a tabindex="0" role="button" data-container="body" class="btn btn-link btn-lg serviceName" data-toggle="popover" data-trigger="focus" data-placement="right" data-content="Pap tests screen for abnormalities that could indicate pre- or early cervical cancer. Women ages 21-29 should receive a Pap test every 3 years. If you are over age 30 and your Pap smear and HPV test are normal, you only need a Pap smear every 5 years.">Pap Test</a>
 	</div>
 
-	<div class="col-md-4 col-12">
-	<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#papModal">Add info about a PAP Test</button>
+	<div class="col-md-5 col-12">
+	<button type="button" class="add" data-toggle="modal" data-target="#papModal">Add info about a Pap Test</button>
 </div>
 </div>
 
@@ -148,7 +147,7 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="papModalLabel">PAP Test</h5>
+        <h5 class="modal-title" id="papModalLabel"Pap Test</h5>
       </div>
       <div class="modal-body">
 		
@@ -186,7 +185,7 @@
       				<input type="text" class="form-control" placeholder="Notes/comments" name="note">
     			</div>
 			</div>
-    			<button type="submit" form="pap" id="pap_button">Save PAP Test Info</button>
+    			<button type="submit" form="pap" id="pap_button">Save Pap Test Info</button>
     	</form>
     	</div>
     </div>
@@ -197,11 +196,13 @@
 
 
 <div class="form-group row">
-	<div class="col-md-4 offset-2 col-12">
-		<a tabindex="0" role="button" data-container="body" class="btn btn-link btn-lg" data-toggle="popover" data-trigger="focus" data-placement="right" data-content="HIV and STI tests prevent the spread of HIV and other STDs, many of which can only be detected through testing. All sexually active women and their partners should be tested for HIV and other STIs before starting sexual activity.">HIV and STI Test</a>
+	<div class="col-md-5 offset-2 col-12">
+		<img src="/../images/heart2.png">
+
+		<a tabindex="0" role="button" data-container="body" class="btn btn-link btn-lg serviceName" data-toggle="popover" data-trigger="focus" data-placement="right" data-content="HIV and STI tests prevent the spread of HIV and other STDs, many of which can only be detected through testing. All sexually active women and their partners should be tested for HIV and other STIs before starting sexual activity.">HIV and STI Test</a>
 	</div>
-	<div class="col-md-4 col-12">
-		<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#hivModal">Add info about an HIV/STI Test</button>
+	<div class="col-md-5 col-12">
+		<button type="button" class="add" data-toggle="modal" data-target="#hivModal">Add info about an HIV/STI Test</button>
 	</div>
 </div>
 
@@ -257,11 +258,13 @@
 <!-- ADDITIONAL SERVICES/TEST -->
     	
 <div class="form-group row">
-		<div class="col-md-4 offset-2 col-12">
-    		<a tabindex="0" role="button" data-container="body" class="btn btn-link btn-lg" data-toggle="popover" data-trigger="focus" data-placement="right" data-content="Use this form to insert any additional services not listed above.">Additional Services/Tests</a>
+		<div class="col-md-5 offset-2 col-12">
+			<img src="/../images/doctor2.png">
+
+    		<a tabindex="0" role="button" data-container="body" class="btn btn-link btn-lg serviceName" data-toggle="popover" data-trigger="focus" data-placement="right" data-content="Use this form to insert any additional services not listed above.">Additional Service</a>
 		</div>
-	<div class="col-md-4 col-12">
-		<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#otherModal">Add info about a service/test</button>
+	<div class="col-md-5 col-12">
+		<button type="button" class="add" data-toggle="modal" data-target="#otherModal">Add info about a service/test</button>
 	</div>
 </div>
 
@@ -269,7 +272,7 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="otherModalLabel">Additional Service/Test</h5>
+        <h5 class="modal-title" id="otherModalLabel">Additional Service</h5>
       </div>
       <div class="modal-body">
         <form id="other">
@@ -311,6 +314,7 @@
       </div>
     </div>
   </div>
+</div>
 </div>
 
 <!-- THESE MUST BE HERE IN ORDER FOR POPOVERS TO WORK! -->

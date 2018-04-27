@@ -8,6 +8,7 @@ $(document).ready(function() {
       trigger: 'focus'
    });
 
+// ADDING SERVICE TO USER RECORDS IN DATABASE
   $('form').on('submit', function (e){
     console.log("button clicked!!");
       e.preventDefault();

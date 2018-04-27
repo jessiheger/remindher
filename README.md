@@ -20,3 +20,9 @@ A mobile app that allows women to learn about the recommended reproductive healt
 ### Credits
 - Icons:
 	- Created by Dinosoft Labs, from Noun Project
+	- vagina by Hea Poh Lin from the Noun Project
+	- Checklist by ProSymbols from the Noun Project
+	- Doctor by dDara from the Noun Project
+	- Heart by Vicons Design from the Noun Project
+	- Syringe by Gregor Cresnar from the Noun Project
+	- Doctor by Iconic from the Noun Project

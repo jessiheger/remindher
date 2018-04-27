@@ -3,9 +3,9 @@
     <div>
     <% currentUser.services.forEach(function(service){ %>
     	<div class= "serviceSection">
-            <h2 class="historySection"><%= service.name %> </h2>
+            <h2><%= service.name %> </h2>
             <button class="trashcan" data-id="<%= service._id %>">DELETE</button>
-
+            <!-- <img src="/../images/trashcan.png"> -->
             <ul>
                 <li>Date: <%= service.date %></li>
                 <li>Provider: <%= service.provider %></li>
@@ -16,5 +16,5 @@
     <% }); %> 
     </div>
 
-    <script src="scripts/history.js"></script>
+    <script src="scripts/records.js"></script>
 </body>

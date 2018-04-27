@@ -1,15 +1,16 @@
 <h2>Let's find you an OB/GYN, <%= currentUser.name %>! </h2>
 <hr>
 <p id="zipP" style="text-align: center">Based on your current zipcode of <%= currentUser.location %></p>
-<form id="changeZip">
+<form class ="col-6 offset-4" id="changeZip">
 	<input id="zipcode" type="text" placeholder="<%= currentUser.location %>">
 	<button form="changeZip">Change your zipcode</button>
 </form>
-<br>
-
+<div class="smallDiv">
 <% for(let i=0; i < doctors.results.length; i++) { %>
-    <h4> <%= doctors.results[i].name %></h3>
-    <p> <%= doctors.results[i].vicinity %></p>
+	<%var name = doctors.results[i].name %>
+    <h4> <%= doctors.results[i].name %></h4>
+    <a href=`http://www.google.com/search?q=${name}`><%=doctors.results[i].name%></a>
+    <p class="indent"> <%= doctors.results[i].vicinity %></p>
 <% } %>
-
+</div>
 <script type="text/javascript" src="scripts/find.js"></script>

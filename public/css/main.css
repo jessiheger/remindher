@@ -28,8 +28,10 @@ h2 {
 	font-weight: bolder;
 	padding-top: 20px;
 }
+
+
 h4 {
-	font-family: 'Rufina', serif;
+	font-family: 'Julius Sans One', sans-serif;
 	/*color: #2F4F4F;*/
 	color: black;
 	font-size: 2em;
@@ -50,9 +52,10 @@ a {
 	/*font-family: 'Josefin Slab', serif;*/
 	font-family: 'Rufina', serif;
 	padding-left: 15%;
-
-
+	color: #2F4F4F;
 }
+
+
 
 label {
 	font-family: 'Josefin Slab', serif;
@@ -65,8 +68,20 @@ label {
 }
 
 input {
-	font-family: 'Josefin Slab', serif;
+	font-family: 'Julius Sans One', sans-serif;
+}
 
+li {
+	font-family: 'Julius Sans One', sans-serif;
+	font-size: 20px;
+	font-weight: bold;
+	/*padding-left: 15%;*/
+}
+
+.trashcan {
+	float: right;
+	margin-right: 10px;
+	
 }
 
 button {
@@ -101,16 +116,34 @@ btn-primary {
 
 .historySection {
 	position: relative;
+}
+
+.smallDiv, .serviceSection {
+	background:rgba(255,255,255, 0.5);
+	border-radius: 10px;
+	margin-top: 20px;
+}
+
+.serviceName {
+	font-size: 1.3em;
+	font-family: 'Julius Sans One', sans-serif;
+	font-weight: bolder;
+}
+
+.indent {
+	padding-left: 30px;
+}
+
+.context {
+	/*font-family: 'Julius Sans One', sans-serif;*/
+	font-family: 'Josefin Slab', serif;
+	font-size: 1.2em;
+	text-align: center;
+	color: #2f4f4f;
 
 }
 
-.trashcan {
-	float: right;
-	
+#changeZip {
+	display: center;
 }
 
-#physicalDiv {
-	display: none;
-	background:rgba(255,255,255, 0.8);
-
-}

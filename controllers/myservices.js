@@ -10,7 +10,9 @@ var mongoose		= require('mongoose');
 var User 			= require('../models/user');
 var Service 		= require('../models/service');
 
-router.post('/', isLoggedIn, function addServices(req, res) {
+
+// ADD SERVICE TO USER RECORDS
+router.post('/', isLoggedIn, function(req, res) {
   User.findById(res.locals.currentUser.id, (err, user) => {
       // console.log(req.body)
     Service.create(req.body, (err, service) => {
