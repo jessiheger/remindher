@@ -1,0 +1,20 @@
+<h2>My Records</h2>
+<body>
+    <div>
+    <% currentUser.services.forEach(function(service){ %>
+    	<div class= "serviceSection">
+            <h2 class="historySection"><%= service.name %> </h2>
+            <button class="trashcan" data-id="<%= service._id %>">DELETE</button>
+
+            <ul>
+                <li>Date: <%= service.date %></li>
+                <li>Provider: <%= service.provider %></li>
+                <li>Location: <%= service.place %></li>
+                <li>Notes: <%= service.note %></li>
+            </ul>
+        </div> 
+    <% }); %> 
+    </div>
+
+    <script src="scripts/history.js"></script>
+</body>

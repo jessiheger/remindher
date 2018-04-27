@@ -1,0 +1,20 @@
+<!-- partials can be used selectively, versus layout which is on every page -->
+
+<!-- if there are errors, create an alert for them, loop through them and print out error message (in case you have more than one at a time) -->
+
+<% if (alerts.error) {%>
+	<% alerts.error.forEach(function(message) { %>
+		<div class="alert alert-danger"><%= message %> </div>
+
+		<% }) %>
+<%} %>
+
+<% if (alerts.success) {%>
+<!-- if there are successes, create an alert for them, loop through them and print out success message -->
+	<% alerts.success.forEach(function(message) { %>
+		<div class="alert alert-success"><%= message %> </div>
+
+		<% }) %>
+<%} %>
+
+<!-- must include alerts in the layout.ejs file -->

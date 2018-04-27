@@ -1,0 +1,116 @@
+body {
+	/*background-color:  #EEE0E5;*/
+	background-image: url("background.jpg");
+	background-attachment: fixed;
+	padding-top: 5%;
+}
+
+h1 {
+	/*color: #2F4F4F;*/
+	color: black;
+	/*font-family: 'Josefin Slab', serif;*/
+	/*font-family: 'Quattrocento', serif;*/
+	/*font-family: 'Rufina', serif;*/
+	font-family: 'Montserrat Alternates', sans-serif;
+	font-size: 3em;
+}
+
+h2 {
+	/*color: #696969;*/
+	color: black;
+	font-family: 'Josefin Slab', serif;
+	/*font-family: 'Quattrocento', serif;*/
+	/*font-family: 'Rufina', serif;*/
+	/*font-family: 'Montserrat Alternates', sans-serif;*/
+	font-size: 2em;
+	text-transform: uppercase;
+	text-align: center;
+	font-weight: bolder;
+	padding-top: 20px;
+}
+h4 {
+	font-family: 'Rufina', serif;
+	/*color: #2F4F4F;*/
+	color: black;
+	font-size: 2em;
+}
+
+h5 {
+	display: inline;
+}
+
+p {
+	font-family: 'Rufina', serif;
+	/*color: #2F4F4F;*/
+	color: black;
+	font-size: 1em;
+}
+
+a {
+	/*font-family: 'Josefin Slab', serif;*/
+	font-family: 'Rufina', serif;
+	padding-left: 15%;
+
+
+}
+
+label {
+	font-family: 'Josefin Slab', serif;
+	font-size: 1em;
+	text-transform: uppercase;
+	/*color: #2F4F4F;*/
+	color: black;
+	font-weight: bolder;
+
+}
+
+input {
+	font-family: 'Josefin Slab', serif;
+
+}
+
+button {
+	font-family: 'Josefin Slab', serif;
+	margin-bottom: 20px;
+	padding: 10px;
+
+}
+
+btn-primary {
+	background-color: #8B475D;
+}
+
+@media screen and (min-width: 601px) {
+  h4 {
+    font-size: 30px;
+  }
+  p {
+  	font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+    h4 {
+    font-size: 16px;
+  }
+  p {
+  	font-size: 12px;
+  }
+}
+}
+
+.historySection {
+	position: relative;
+
+}
+
+.trashcan {
+	float: right;
+	
+}
+
+#physicalDiv {
+	display: none;
+	background:rgba(255,255,255, 0.8);
+
+}

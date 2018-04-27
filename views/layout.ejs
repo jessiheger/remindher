@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>remind(h)er</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<link href="https://fonts.googleapis.com/css?family=Josefin+Slab:700|Montserrat+Alternates:700|Quattrocento:700|Rufina:700" rel="stylesheet">
+
+	<link rel="stylesheet" type="text/css" href="/css/main.css">
+
+</head>
+<body>
+
+	<div class="container">
+	<h1>remind(h)er</h1>
+		<% include partials/alerts %> 
+			<!-- ^ points to file where alert content can be found; must use the word 'include' -->
+		<hr>
+		<div claass="row">
+			<div class="col-12">
+				<% if(!currentUser) { %>
+					<a href="/auth/login" class="btn btn-outline-secondary">Login</a>
+					<a href="/auth/signup" class="btn btn-outline-secondary">Signup</a>
+				<% } else { %>
+					<a href="/myservices" class="btn btn-outline-secondary">Add/Edit Services</a>
+					<a href="/history" class="btn btn-outline-secondary">My Records</a>
+					<a href="/find" class="btn btn-outline-secondary">Find OB/GYN</a>
+					<a href="/auth/logout" class="btn btn-outline-secondary">Logout</a>
+				<% } %>
+			</div>
+		</div>
+		<%- body %>
+	</div>
+
+<!-- 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+ -->
+</body>
+</html>
+
+
+<!-- anything defined in curly brackets is information taht you can pass to the front end and render onto the page -->
+
+<!-- currentUser comes from index.js -->
