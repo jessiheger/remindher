@@ -15,7 +15,7 @@ var isLoggedIn      = require('./middlewear/isLoggedIn')
 var app         = express();
 
 // Connect to database (can name it whatever I want after localhost/)
-mongoose.connect('mongodb://localhost/reminderher')
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/remindher')
 
 // Set views
 app.set('view engine', 'ejs'); // set EJS as view engine
