@@ -9,7 +9,7 @@ var serviceSchema = new Schema (
 		place: String,
 		provider: String,
 		date: String,
-		completed: String,
+		completed: Boolean,
 		note: String
 	}
 );

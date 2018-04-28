@@ -26,3 +26,5 @@ A mobile app that allows women to learn about the recommended reproductive healt
 	- Heart by Vicons Design from the Noun Project
 	- Syringe by Gregor Cresnar from the Noun Project
 	- Doctor by Iconic from the Noun Project
+	- Pregnant by BomSymbols from the Noun Project
+	- Mammogram by Eucalyp from the Noun Project

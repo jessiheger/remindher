@@ -8,6 +8,9 @@
             <!-- <img src="/../images/trashcan.png"> -->
             <ul>
                 <li>Date: <%= service.date %></li>
+                <%if (service.completed == true) {%>
+                    <li>Completed: yes </li>
+                <%} %>
                 <li>Provider: <%= service.provider %></li>
                 <li>Location: <%= service.place %></li>
                 <li>Notes: <%= service.note %></li>
