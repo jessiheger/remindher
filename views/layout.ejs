@@ -24,13 +24,13 @@
 		<div claass="row">
 			<div class="col-12">
 				<% if(!currentUser) { %>
-					<a href="/auth/login" class="btn btn-outline-secondary">Login</a>
+					<a href="/auth/login" class="btn btn-outline-secondary nav">Login</a>
 					<a href="/auth/signup" class="btn btn-outline-secondary">Signup</a>
 				<% } else { %>
-					<a href="/myservices" class="btn btn-outline-secondary">Add a Service</a>
-					<a href="/records" class="btn btn-outline-secondary">My Records</a>
-					<a href="/find" class="btn btn-outline-secondary">Find OB/GYN</a>
-					<a href="/auth/logout" class="btn btn-outline-secondary">Logout</a>
+					<a href="/myservices" class="btn btn-outline-secondary nav">Add a Service</a>
+					<a href="/records" class="btn btn-outline-secondary nav">My Records</a>
+					<a href="/find" class="btn btn-outline-secondary nav">Find OB/GYN</a>
+					<a href="/auth/logout" class="btn btn-outline-secondary nav">Logout</a>
 				<% } %>
 			</div>
 		</div>
