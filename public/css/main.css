@@ -1,27 +1,18 @@
 body {
-	/*background-color:  #EEE0E5;*/
 	background-image: url("background.jpg");
 	background-attachment: fixed;
-	padding-top: 5%;
 }
 
 h1 {
-	/*color: #2F4F4F;*/
 	color: black;
-	/*font-family: 'Josefin Slab', serif;*/
-	/*font-family: 'Quattrocento', serif;*/
-	/*font-family: 'Rufina', serif;*/
 	font-family: 'Montserrat Alternates', sans-serif;
-	font-size: 3em;
+	font-size: 4em;
+	display: inline;
 }
 
 h2 {
-	/*color: #696969;*/
 	color: black;
 	font-family: 'Josefin Slab', serif;
-	/*font-family: 'Quattrocento', serif;*/
-	/*font-family: 'Rufina', serif;*/
-	/*font-family: 'Montserrat Alternates', sans-serif;*/
 	font-size: 2em;
 	text-transform: uppercase;
 	text-align: center;
@@ -30,7 +21,7 @@ h2 {
 }
 
 
-h4 {
+h4, .docResult {
 	font-family: 'Julius Sans One', sans-serif;
 	/*color: #2F4F4F;*/
 	color: black;
@@ -51,8 +42,8 @@ p {
 a {
 	/*font-family: 'Josefin Slab', serif;*/
 	font-family: 'Rufina', serif;
-	padding-left: 15%;
-	color: #2F4F4F;
+/*	padding-left: 15%;
+*/	color: #2F4F4F;
 }
 
 
@@ -96,7 +87,7 @@ btn-primary {
 }
 
 @media screen and (min-width: 601px) {
-  h4 {
+  .docResult {
     font-size: 30px;
   }
   p {
@@ -105,14 +96,17 @@ btn-primary {
 }
 
 @media screen and (max-width: 600px) {
-    h4 {
+    .docResult {
     font-size: 16px;
   }
   p {
   	font-size: 12px;
   }
+  h1 {
+  	font-size: 3em;
+  }
 }
-}
+
 
 .historySection {
 	position: relative;
@@ -147,3 +141,12 @@ btn-primary {
 	display: center;
 }
 
+.alert {
+	float:right;
+	margin-top: 1%;
+}
+
+#doctorDiv {
+	height: 400px;
+	overflow-y: scroll;
+}

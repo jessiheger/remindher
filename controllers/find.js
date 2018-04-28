@@ -25,9 +25,6 @@ router.get('/', isLoggedIn, function(req, res) {
         let unstringifiedLat = JSON.parse(body).lat;
         let unstringifiedLng = JSON.parse(body).lng;
 
-        console.log("user's Lat is:", unstringifiedLat);
-        console.log("user's Lng is:", unstringifiedLng);
-
         var findDoctors = `https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=${unstringifiedLat},${unstringifiedLng}&radius=40000&keyword=gynecologist&key=${SECRET_KEY_GOOGLE}`;
 
         request(findDoctors, function (error, response, results) {
