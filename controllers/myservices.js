@@ -11,6 +11,11 @@ var User 			= require('../models/user');
 var Service 		= require('../models/service');
 
 
+// Renders page of user's services (ie records page)
+router.get('/', isLoggedIn, function(req, res) {
+	res.render('myservices', {currentUser: res.locals.currentUser});
+});
+
 // ADD SERVICE TO USER RECORDS
 router.post('/', isLoggedIn, function(req, res) {
   User.findById(res.locals.currentUser.id, (err, user) => {

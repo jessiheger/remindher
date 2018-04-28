@@ -58,7 +58,6 @@ router.post('/signup', function(req,res, next) {
 	});
 })
 
-
 //removes user data from session, then redirects to homoe page
 // is a res.send and not res.render bc there's no view associated with the logout page; it's simply redirecting
 router.get('/logout', function(req, res) {

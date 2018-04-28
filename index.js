@@ -47,7 +47,7 @@ app.use(function(req, res, next) {
 
 // Define my top-level routes
 app.get('/', function(req, res) {
-    res.render('auth/login'); // because it's render, it knows to look for myservices file, and because I set the view engine as EJS, it knows to look for EJS
+    res.render('landingpage'); // because it's render, it knows to look for myservices file, and because I set the view engine as EJS, it knows to look for EJS
 });
 
 
