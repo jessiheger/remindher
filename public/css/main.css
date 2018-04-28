@@ -92,7 +92,10 @@ btn-primary {
 }
 
 @media screen and (max-width: 600px) {
-    .docResult {
+body {
+	background-image: url("backgroundSmall.jpg");
+	}
+.docResult {
     font-size: 16px;
   }
   p {
@@ -103,9 +106,6 @@ btn-primary {
   }
   h2 {
   	font-size: 1.5em;
-  }
-  .nav {
-  	font-size: .5em;
   }
 }
 

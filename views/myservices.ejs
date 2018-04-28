@@ -7,464 +7,437 @@
 <body>
 	<h2>Add A Service</h2>
 	<div class="container smallDiv">
-	<p class="context">Click on the name of a service to learn more about it, and/or click the associated button to add information about an upcoming or completed service! You'll find your list of saved services in My Records.</p>
+		<p class="context">Click on the name of a service to learn more about it, and/or click the associated button to add information about an upcoming or completed service! You'll find your list of saved services in My Records.</p>
 
 <!-- ANNUAL PHYSICAL EXAM -->
-<div class="form-group row">
-
-<div class="col-sm-5 offset-2 col-12">
-	<img src="/../images/physical.png">
-	    <a tabindex="0" role="button" data-container="body" class="btn btn-link btn-lg serviceName" data-toggle="popover" data-trigger="focus" data-placement="right" data-content="Annual preventive care visits are recommended for all healthy adults. Annual physicals may include screenings for diseases; assessing your risk for future problems; discussing lifestyle habits; and keeping vaccinations up to date.">Physical Exam</a>
-</div>
-
-		<div class="col-sm-5 col-12">
-			<button type="button" class="add" data-toggle="modal" data-target="#physicalModal">Add service: Physical Exam</button>
+		<div class="form-group row">
+			<div class="col-sm-5 offset-2 col-12">
+				<img src="/../images/physical.png">
+				    <a tabindex="0" role="button" data-container="body" class="btn btn-link btn-lg serviceName" data-toggle="popover" data-trigger="focus" data-placement="right" data-content="Annual preventive care visits are recommended for all healthy adults. Annual physicals may include screenings for diseases; assessing your risk for future problems; discussing lifestyle habits; and keeping vaccinations up to date.">Physical Exam</a>
+			</div>
+			<div class="col-sm-5 col-12">
+				<button type="button" class="add" data-toggle="modal" data-target="#physicalModal">Add service: Physical Exam</button>
+			</div>
 		</div>
-</div>
 
-<div class="modal fade" id="physicalModal" tabindex="-1" role="dialog" aria-labelledby="physicalModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-lg" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="physicalModalLabel">Annual Physical Exam</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-
-		<form id="physical" action="/myservices">
-			<div class="form-group row">
-	    		<label class="col-sm-4 col-form-label">Service</label>
-				<div class="col-sm-4">
-      				<input type="text" class="form-control" value="Annual Physical Exam" name="name">
-    			</div>
+		<div class="modal fade" id="physicalModal" tabindex="-1" role="dialog" aria-labelledby="physicalModalLabel" aria-hidden="true">
+		  	<div class="modal-dialog modal-lg" role="document">
+		   		<div class="modal-content">
+		      		<div class="modal-header">
+		        		<h5 class="modal-title" id="physicalModalLabel">Annual Physical Exam</h5>
+		        		<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+		          			<span aria-hidden="true">&times;</span>
+		        		</button>
+		      		</div>
+			      	<div class="modal-body">
+			      		<form id="physical" action="/myservices">
+							<div class="form-group row">
+					    		<label class="col-sm-4 col-form-label">Service</label>
+								<div class="col-sm-4">
+				      				<input type="text" class="form-control" value="Annual Physical Exam" name="name">
+				    			</div>
+							</div>
+						    <div class="form-group row">
+					    		<label class="col-sm-4 col-form-label">Scheduled</label>
+								<div class="col-sm-4">
+				      				<input type="date" class="form-control" placeholder="DD/MM/YY" name="date">
+				    			</div>
+				    			<div class="col-sm-4 offset-sm-4 form-group row">
+				    				<label><input type="checkbox" name="completed" value="true"> Completed?</label>
+				  				</div>
+							</div>
+							<div class="form-group row">
+					    		<label class="col-sm-4 col-form-label">Provider</label>
+								<div class="col-sm-4">
+				      				<input type="text" class="form-control" placeholder="E.g. Dr. Virginia Smith" id="physical_provider" name="provider">
+				    			</div>
+							</div>
+							<div class="form-group row">
+					    		<label class="col-sm-4 col-form-label">Location</label>
+								<div class="col-sm-4">
+				      				<input type="text" class="form-control" placeholder="E.g. Planned Parenthood" name="place">
+				    			</div>
+							</div>
+							<div class="form-group row">
+					    		<label class="col-sm-4 col-form-label">Notes</label>
+								<div class="col-sm-4">
+				      				<input type="text" class="form-control" placeholder="Notes/comments" name="note">
+				    			</div>
+							</div>
+							<button type="submit" form="physical" id="hpv_button">Save Physical Exam Info</button>
+						</form>
+					</div>
+		    	</div>
 			</div>
-		    <div class="form-group row">
-	    		<label class="col-sm-4 col-form-label">Scheduled</label>
-				<div class="col-sm-4">
-      				<input type="date" class="form-control" placeholder="DD/MM/YY" name="date">
-    			</div>
-    			<div class="col-sm-4 offset-sm-4 form-group row">
-    				<label><input type="checkbox" name="completed" value="true"> Completed?</label>
-  				</div>
-			</div>
-			<div class="form-group row">
-	    		<label class="col-sm-4 col-form-label">Provider</label>
-				<div class="col-sm-4">
-      				<input type="text" class="form-control" placeholder="E.g. Dr. Virginia Smith" id="physical_provider" name="provider">
-    			</div>
-			</div>
-			<div class="form-group row">
-	    		<label class="col-sm-4 col-form-label">Location</label>
-				<div class="col-sm-4">
-      				<input type="text" class="form-control" placeholder="E.g. Planned Parenthood" name="place">
-    			</div>
-			</div>
-			<div class="form-group row">
-	    		<label class="col-sm-4 col-form-label">Notes</label>
-				<div class="col-sm-4">
-      				<input type="text" class="form-control" placeholder="Notes/comments" name="note">
-    			</div>
-			</div>
-			<button type="submit" form="physical" id="hpv_button">Save Physical Exam Info</button>
-		</form>
 		</div>
-    </div>
-  </div>
-</div>
 
+		<!-- HPV VACCINE  -->
+		<div class="form-group row">
+			<div class="col-md-5 offset-2 col-12">
+				<img src="/../images/syringe.png">
+				<a tabindex="0" role="button" data-container="body" class="btn btn-link btn-lg serviceName" data-toggle="popover" data-trigger="focus" data-placement="right" data-content="The HPV vaccine protects against cancers caused by human papillomavirus (HPV) infection, including but not limited to cancers of the cervix, vagina, and vulva. The vaccine involves 3 shots given over a 6-month period, and is recommended for young women through age 26, and young men through age 21.">HPV Vaccine</a>	
+			</div>		
+			<div class="col-md-5 col-12">
+				<button type="button" class="add" data-toggle="modal" data-target="#hpvModal">Add service: HPV Vaccine</button>
+			</div>
+		</div>
+		<div class="modal fade" id="hpvModal" tabindex="-1" role="dialog" aria-labelledby="hpvModalLabel" aria-hidden="true">
+		  	<div class="modal-dialog modal-lg" role="document">
+		    	<div class="modal-content">
+		      		<div class="modal-header">
+		        		<h5 class="modal-title" id="hpvModalLabel">HPV vaccine</h5>
+		        		<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+		          			<span aria-hidden="true">&times;</span>
+		        		</button>
+		      		</div>
+			      	<div class="modal-body">
+			      		<form id="hpv">
+							<div class="form-group row">
+					    		<label class="col-sm-4 col-form-label">Service</label>
+								<div class="col-sm-4">
+				      				<input type="text" class="form-control" value="HVP Shot" name="name">
+				    			</div>
+							</div>
+							<div class="form-group row">
+							    <label class="col-sm-4 col-form-label">Date</label>
+								    <div class="col-sm-4">
+								      <input type="date" class="form-control" placeholder="DD/MM/YY" name="date">
+								    </div>
+								     <div class="col-sm-4 offset-sm-4 form-group row">
+				    					<label><input type="checkbox" value="true"> Completed?</label>
+				  					</div>
+							</div>
+							<div class="form-group row">
+					    		<label class="col-sm-4 col-form-label">Provider</label>
+								<div class="col-sm-4">
+				      				<input type="text" class="form-control" placeholder="E.g. Dr. Virginia Smith" id="hpv_provider" name="provider">
+				    			</div>
+							</div>
+							<div class="form-group row">
+					    		<label class="col-sm-4 col-form-label">Location</label>
+								<div class="col-sm-4">
+				      				<input type="text" class="form-control" placeholder="E.g. Planned Parenthood" name="place">
+				    			</div>
+							</div>
+							<div class="form-group row">
+					    		<label class="col-sm-4 col-form-label">Notes</label>
+								<div class="col-sm-4">
+				      				<input type="text" class="form-control" placeholder="Notes/comments" name="note">
+				    			</div>
+							</div>
+							<button type="submit" form="hpv" id="hpv_button">Save HPV Vaccine Info</button>
+						</form>
+					</div>
+		    	</div>
+			</div>
+		</div>
 
+		<!-- PAP TEST -->
+		<div class="form-group row">
+			<div class="col-md-5 offset-2 col-12">
+				<img src="/../images/body.png">
+				<a tabindex="0" role="button" data-container="body" class="btn btn-link btn-lg serviceName" data-toggle="popover" data-trigger="focus" data-placement="right" data-content="Pap tests screen for abnormalities that could indicate pre- or early cervical cancer. Women ages 21-29 should receive a Pap test every 3 years. If you are over age 30 and your Pap smear and HPV test are normal, you only need a Pap smear every 5 years.">Pap Test</a>
+			</div>
+			<div class="col-md-5 col-12">
+				<button type="button" class="add" data-toggle="modal" data-target="#papModal">Add service: Pap Test</button>
+			</div>
+		</div>
 
-<!-- HPV VACCINE  -->
-<div class="form-group row">
-	<div class="col-md-5 offset-2 col-12">
-			<img src="/../images/syringe.png">
+		<div class="modal fade" id="papModal" tabindex="-1" role="dialog" aria-labelledby="papModalLabel" aria-hidden="true">
+		  	<div class="modal-dialog" role="document">
+			    <div class="modal-content">
+			      	<div class="modal-header">
+			        	<h5 class="modal-title" id="papModalLabel">Pap Test</h5>
+			        	<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+			          		<span aria-hidden="true">&times;</span>
+			        	</button>
+			      	</div>
+			    	<div class="modal-body">
+			      		<form id="pap">
+						    <div class="form-group row">
+					    		<label class="col-sm-4 col-form-label">Service</label>
+								<div class="col-sm-4">
+				      				<input type="text" class="form-control" value="PAP Test" name="name">
+				    			</div>
+							</div>
+						    <div class="form-group row">
+					    		<label class="col-sm-4 col-form-label">Scheduled</label>
+								<div class="col-sm-4">
+				      				<input type="date" class="form-control" placeholder="DD/MM/YY" name="date">
+				    			</div>
+				    			<div class="col-sm-4 offset-sm-4 form-group row">
+				    				<label><input type="checkbox" name="completed" value="true"> Completed?</label>
+				  				</div>
+							</div>
+							<div class="form-group row">
+					    		<label class="col-sm-4 col-form-label">Provider</label>
+								<div class="col-sm-4">
+				      				<input type="text" class="form-control" placeholder="E.g. Dr. Virginia Smith" id="pap_provider" name="provider">
+				    			</div>
+							</div>
+							<div class="form-group row">
+					    		<label class="col-sm-4 col-form-label">Location</label>
+								<div class="col-sm-4">
+				      				<input type="text" class="form-control" placeholder="E.g. Planned Parenthood" name="place">
+				    			</div>
+							</div>
+							<div class="form-group row">
+					    		<label class="col-sm-4 col-form-label">Notes</label>
+								<div class="col-sm-4">
+				      				<input type="text" class="form-control" placeholder="Notes/comments" name="note">
+				    			</div>
+							</div>
+				    		<button type="submit" form="pap" id="pap_button">Save Pap Test Info</button>
+			    		</form>
+			    	</div>
+			    </div>
+			</div>
+		</div>
 
-		<a tabindex="0" role="button" data-container="body" class="btn btn-link btn-lg serviceName" data-toggle="popover" data-trigger="focus" data-placement="right" data-content="The HPV vaccine protects against cancers caused by human papillomavirus (HPV) infection, including but not limited to cancers of the cervix, vagina, and vulva. The vaccine involves 3 shots given over a 6-month period, and is recommended for young women through age 26, and young men through age 21.">HPV Vaccine</a>	
-	</div>		
-	<div class="col-md-5 col-12">
-		<button type="button" class="add" data-toggle="modal" data-target="#hpvModal">Add service: HPV Vaccine</button>
+		<!-- HIV AND STI TEST -->
+		<div class="form-group row">
+			<div class="col-md-5 offset-2 col-12">
+				<img src="/../images/heart2.png">
+				<a tabindex="0" role="button" data-container="body" class="btn btn-link btn-lg serviceName" data-toggle="popover" data-trigger="focus" data-placement="right" data-content="HIV and STI tests prevent the spread of HIV and other STDs, many of which can only be detected through testing. All sexually active women and their partners should be tested for HIV and other STIs before starting sexual activity.">HIV and STI Test</a>
+			</div>
+			<div class="col-md-5 col-12">
+				<button type="button" class="add" data-toggle="modal" data-target="#hivModal">Add service: HIV/STI Test</button>
+			</div>
+		</div>
+		<div class="modal fade" id="hivModal" tabindex="-1" role="dialog" aria-labelledby="hivModalLabel" aria-hidden="true">
+		  	<div class="modal-dialog" role="document">
+		    	<div class="modal-content">
+		      		<div class="modal-header">
+		        		<h5 class="modal-title" id="hivModalLabel">HIV/STI Test</h5>
+		        		<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+		        			<span aria-hidden="true">&times;</span>
+		        		</button>
+		      		</div>
+		      	<div class="modal-body">
+		      		<form id="sti">
+					    <div class="form-group row">
+				    		<label class="col-sm-4 col-form-label">Service</label>
+							<div class="col-sm-4">
+			      				<input type="text" class="form-control" value="HIV/STI Test" name="name">
+			    			</div>
+						</div>
+					    <div class="form-group row">
+				    		<label class="col-sm-4 col-form-label">Scheduled</label>
+							<div class="col-sm-4">
+			      				<input type="date" class="form-control" placeholder="DD/MM/YY" name="date">
+			    			</div>
+			    			<div class="col-sm-4 offset-sm-4 form-group row">
+			    				<label><input type="checkbox" name="completed" value="true"> Completed?</label>
+			  				</div>
+						</div>
+						<div class="form-group row">
+				    		<label class="col-sm-4 col-form-label">Provider</label>
+							<div class="col-sm-4">
+			      				<input type="text" class="form-control" placeholder="E.g. Dr. Virginia Smith" id="hivsti_provider" name="provider">
+			    			</div>
+						</div>
+						<div class="form-group row">
+				    		<label class="col-sm-4 col-form-label">Location</label>
+							<div class="col-sm-4">
+			      				<input type="text" class="form-control" placeholder="E.g. Planned Parenthood" name="place">
+			    			</div>
+						</div>
+							<div class="form-group row">
+				    			<label class="col-sm-4 col-form-label">Notes</label>
+								<div class="col-sm-4">
+			      					<input type="text" class="form-control" placeholder="Notes/comments" name="note">
+			    				</div>
+							</div>
+			    			<button type="submit" form="sti" id="hivsti_button">Save HIV/STI Test Info</button>
+		    			</form>
+		    		</div>
+		    	</div>
+			</div>
+		</div>
+
+		<!-- PRENATAL CHECKUP -->
+		    	
+		<div class="form-group row">
+			<div class="col-md-5 offset-2 col-12">
+				<img src="/../images/pregnant.png">
+		    	<a tabindex="0" role="button" data-container="body" class="btn btn-link btn-lg serviceName" data-toggle="popover" data-trigger="focus" data-placement="right" data-content="Use this form to insert any additional services not listed above.">Prenatal Checkup</a>
+			</div>
+			<div class="col-md-5 col-12">
+				<button type="button" class="add" data-toggle="modal" data-target="#prenatalModal">Add service: Prenatal Checkup</button>
+			</div>
+		</div>
+		<div class="modal fade" id="otherModal" tabindex="-1" role="dialog" aria-labelledby="otherModalLabel" aria-hidden="true">
+		  <div class="modal-dialog" role="document">
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <h5 class="modal-title" id="otherModalLabel">Prenatal Checkup</h5>
+		        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+		        	<span aria-hidden="true">&times;</span>
+		        </button>
+		      </div>
+		      <div class="modal-body">
+		      		<form id="prenatal">
+			          	<div class="form-group row">
+				    		<label class="col-sm-4 col-form-label">Service</label>
+							<div class="col-sm-4">
+			      				<input type="text" class="form-control" value="other" name="name">
+			    			</div>
+						</div>
+					    <div class="form-group row">
+				    		<label class="col-sm-4 col-form-label">Scheduled</label>
+							<div class="col-sm-4">
+			      				<input type="date" class="form-control" placeholder="DD/MM/YY" name="date">
+			    			</div>
+			    			<div class="col-sm-4 offset-sm-4 form-group row">
+			    				<label><input type="checkbox" name="completed" value="true"> Completed?</label>
+			  				</div>
+						</div>
+						<div class="form-group row">
+				    		<label class="col-sm-4 col-form-label">Provider</label>
+							<div class="col-sm-4">
+			      				<input type="text" class="form-control" placeholder="E.g. Dr. Virginia Smith" id="other_provider" name="provider">
+			    			</div>
+						</div>
+						<div class="form-group row">
+				    		<label class="col-sm-4 col-form-label">Location</label>
+							<div class="col-sm-4">
+			      				<input type="text" class="form-control" placeholder="E.g. Planned Parenthood" name="place">
+			    			</div>
+						</div>
+						<div class="form-group row">
+				    		<label class="col-sm-4 col-form-label">Notes</label>
+							<div class="col-sm-4">
+			      				<input type="text" class="form-control" placeholder="Notes/comments" name="note">
+			    			</div>
+						</div>
+			    		<button type="submit" form="prenatal" id="prenatal_button">Save Prenatal Checkup Info</button>
+		        	</form>
+		      	</div>
+		    </div>
+		</div>
 	</div>
-</div>
 
-<div class="modal fade" id="hpvModal" tabindex="-1" role="dialog" aria-labelledby="hpvModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-lg" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="hpvModalLabel">HPV vaccine</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-
-		<form id="hpv">
-			<div class="form-group row">
-	    		<label class="col-sm-4 col-form-label">Service</label>
-				<div class="col-sm-4">
-      				<input type="text" class="form-control" value="HVP Shot" name="name">
-    			</div>
+		<!-- MAMMOGRAM -->
+		<div class="form-group row">
+			<div class="col-sm-5 offset-2 col-12">
+				<img src="/../images/boobs.png">
+			    <a tabindex="0" role="button" data-container="body" class="btn btn-link btn-lg serviceName" data-toggle="popover" data-trigger="focus" data-placement="right" data-content="Annual preventive care visits are recommended for all healthy adults. Annual physicals may include screenings for diseases; assessing your risk for future problems; discussing lifestyle habits; and keeping vaccinations up to date.">Mammogram</a>
 			</div>
-			<div class="form-group row">
-			    <label class="col-sm-4 col-form-label">Date</label>
-				    <div class="col-sm-4">
-				      <input type="date" class="form-control" placeholder="DD/MM/YY" name="date">
-				    </div>
-				     <div class="col-sm-4 offset-sm-4 form-group row">
-    					<label><input type="checkbox" value="true"> Completed?</label>
-  					</div>
+			<div class="col-sm-5 col-12">
+				<button type="button" class="add" data-toggle="modal" data-target="#mammogramModal">Add service: Mammogram</button>
 			</div>
-			<div class="form-group row">
-	    		<label class="col-sm-4 col-form-label">Provider</label>
-				<div class="col-sm-4">
-      				<input type="text" class="form-control" placeholder="E.g. Dr. Virginia Smith" id="hpv_provider" name="provider">
-    			</div>
-			</div>
-			<div class="form-group row">
-	    		<label class="col-sm-4 col-form-label">Location</label>
-				<div class="col-sm-4">
-      				<input type="text" class="form-control" placeholder="E.g. Planned Parenthood" name="place">
-    			</div>
-			</div>
-			<div class="form-group row">
-	    		<label class="col-sm-4 col-form-label">Notes</label>
-				<div class="col-sm-4">
-      				<input type="text" class="form-control" placeholder="Notes/comments" name="note">
-    			</div>
-			</div>
-			<button type="submit" form="hpv" id="hpv_button">Save HPV Vaccine Info</button>
-		</form>
 		</div>
-    </div>
-  </div>
-</div>
-
-
-<!-- PAP TEST -->
-<div class="form-group row">
-	<div class="col-md-5 offset-2 col-12">
-		<img src="/../images/body.png">
-
-		<a tabindex="0" role="button" data-container="body" class="btn btn-link btn-lg serviceName" data-toggle="popover" data-trigger="focus" data-placement="right" data-content="Pap tests screen for abnormalities that could indicate pre- or early cervical cancer. Women ages 21-29 should receive a Pap test every 3 years. If you are over age 30 and your Pap smear and HPV test are normal, you only need a Pap smear every 5 years.">Pap Test</a>
+		<div class="modal fade" id="mammogramModal" tabindex="-1" role="dialog" aria-labelledby="mammogramModalLabel" aria-hidden="true">
+		  <div class="modal-dialog modal-lg" role="document">
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <h5 class="modal-title" id="physicalModalLabel">Mammogram</h5>
+		        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+		        	<span aria-hidden="true">&times;</span>
+		        </button>
+		      </div>
+		      <div class="modal-body">
+					<form id="physical" action="/myservices">
+						<div class="form-group row">
+				    		<label class="col-sm-4 col-form-label">Service</label>
+							<div class="col-sm-4">
+			      				<input type="text" class="form-control" value="Mammogram" name="name">
+			    			</div>
+						</div>
+					    <div class="form-group row">
+				    		<label class="col-sm-4 col-form-label">Scheduled</label>
+							<div class="col-sm-4">
+			      				<input type="date" class="form-control" placeholder="DD/MM/YY" name="date">
+			    			</div>
+			    			<div class="col-sm-4 offset-sm-4 form-group row">
+			    				<label><input type="checkbox" name="completed" value="true"> Completed?</label>
+			  				</div>
+						</div>
+						<div class="form-group row">
+				    		<label class="col-sm-4 col-form-label">Provider</label>
+							<div class="col-sm-4">
+			      				<input type="text" class="form-control" placeholder="E.g. Dr. Virginia Smith" id="physical_provider" name="provider">
+			    			</div>
+						</div>
+						<div class="form-group row">
+				    		<label class="col-sm-4 col-form-label">Location</label>
+							<div class="col-sm-4">
+			      				<input type="text" class="form-control" placeholder="E.g. Planned Parenthood" name="place">
+			    			</div>
+						</div>
+						<div class="form-group row">
+				    		<label class="col-sm-4 col-form-label">Notes</label>
+							<div class="col-sm-4">
+			      				<input type="text" class="form-control" placeholder="Notes/comments" name="note">
+			    			</div>
+						</div>
+						<button type="submit" form="mammogram" id="hpv_button">Save Mammogram Info</button>
+					</form>
+				</div>
+		    </div>
+		</div>
 	</div>
 
-	<div class="col-md-5 col-12">
-	<button type="button" class="add" data-toggle="modal" data-target="#papModal">Add service: Pap Test</button>
-</div>
-</div>
-
-<div class="modal fade" id="papModal" tabindex="-1" role="dialog" aria-labelledby="papModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="papModalLabel">Pap Test</h5>
-        	<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-		
-		<form id="pap">
-		    <div class="form-group row">
-	    		<label class="col-sm-4 col-form-label">Service</label>
-				<div class="col-sm-4">
-      				<input type="text" class="form-control" value="PAP Test" name="name">
-    			</div>
+		<!-- ADDITIONAL SERVICES/TEST -->
+		<div class="form-group row">
+			<div class="col-md-5 offset-2 col-12">
+				<img src="/../images/doctor2.png">
+	    		<a tabindex="0" role="button" data-container="body" class="btn btn-link btn-lg serviceName" data-toggle="popover" data-trigger="focus" data-placement="right" data-content="Use this form to insert any additional services not listed above.">Additional Service</a>
 			</div>
-		    <div class="form-group row">
-	    		<label class="col-sm-4 col-form-label">Scheduled</label>
-				<div class="col-sm-4">
-      				<input type="date" class="form-control" placeholder="DD/MM/YY" name="date">
-    			</div>
-    			<div class="col-sm-4 offset-sm-4 form-group row">
-    				<label><input type="checkbox" name="completed" value="true"> Completed?</label>
-  				</div>
+			<div class="col-md-5 col-12">
+				<button type="button" class="add" data-toggle="modal" data-target="#otherModal">Add service: Additional</button>
 			</div>
-			<div class="form-group row">
-	    		<label class="col-sm-4 col-form-label">Provider</label>
-				<div class="col-sm-4">
-      				<input type="text" class="form-control" placeholder="E.g. Dr. Virginia Smith" id="pap_provider" name="provider">
-    			</div>
-			</div>
-			<div class="form-group row">
-	    		<label class="col-sm-4 col-form-label">Location</label>
-				<div class="col-sm-4">
-      				<input type="text" class="form-control" placeholder="E.g. Planned Parenthood" name="place">
-    			</div>
-			</div>
-			<div class="form-group row">
-	    		<label class="col-sm-4 col-form-label">Notes</label>
-				<div class="col-sm-4">
-      				<input type="text" class="form-control" placeholder="Notes/comments" name="note">
-    			</div>
-			</div>
-    			<button type="submit" form="pap" id="pap_button">Save Pap Test Info</button>
-    	</form>
-    	</div>
-    </div>
-  </div>
-</div>
-
-<!-- HIV AND STI TEST -->
-
-
-<div class="form-group row">
-	<div class="col-md-5 offset-2 col-12">
-		<img src="/../images/heart2.png">
-
-		<a tabindex="0" role="button" data-container="body" class="btn btn-link btn-lg serviceName" data-toggle="popover" data-trigger="focus" data-placement="right" data-content="HIV and STI tests prevent the spread of HIV and other STDs, many of which can only be detected through testing. All sexually active women and their partners should be tested for HIV and other STIs before starting sexual activity.">HIV and STI Test</a>
-	</div>
-	<div class="col-md-5 col-12">
-		<button type="button" class="add" data-toggle="modal" data-target="#hivModal">Add service: HIV/STI Test</button>
-	</div>
-</div>
-
-<div class="modal fade" id="hivModal" tabindex="-1" role="dialog" aria-labelledby="hivModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="hivModalLabel">HIV/STI Test</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-
-    	<form id="sti">
-		    <div class="form-group row">
-	    		<label class="col-sm-4 col-form-label">Service</label>
-				<div class="col-sm-4">
-      				<input type="text" class="form-control" value="HIV/STI Test" name="name">
-    			</div>
-			</div>
-		    <div class="form-group row">
-	    		<label class="col-sm-4 col-form-label">Scheduled</label>
-				<div class="col-sm-4">
-      				<input type="date" class="form-control" placeholder="DD/MM/YY" name="date">
-    			</div>
-    			<div class="col-sm-4 offset-sm-4 form-group row">
-    				<label><input type="checkbox" name="completed" value="true"> Completed?</label>
-  				</div>
-			</div>
-			<div class="form-group row">
-	    		<label class="col-sm-4 col-form-label">Provider</label>
-				<div class="col-sm-4">
-      				<input type="text" class="form-control" placeholder="E.g. Dr. Virginia Smith" id="hivsti_provider" name="provider">
-    			</div>
-			</div>
-			<div class="form-group row">
-	    		<label class="col-sm-4 col-form-label">Location</label>
-				<div class="col-sm-4">
-      				<input type="text" class="form-control" placeholder="E.g. Planned Parenthood" name="place">
-    			</div>
-			</div>
-			<div class="form-group row">
-	    		<label class="col-sm-4 col-form-label">Notes</label>
-				<div class="col-sm-4">
-      				<input type="text" class="form-control" placeholder="Notes/comments" name="note">
-    			</div>
-			</div>
-    		<button type="submit" form="sti" id="hivsti_button">Save HIV/STI Test Info</button>
-    	</form>
-    	</div>
-    </div>
-  </div>
-</div>
-
-<!-- PRENATAL CHECKUP -->
-    	
-<div class="form-group row">
-		<div class="col-md-5 offset-2 col-12">
-			<img src="/../images/pregnant.png">
-
-    		<a tabindex="0" role="button" data-container="body" class="btn btn-link btn-lg serviceName" data-toggle="popover" data-trigger="focus" data-placement="right" data-content="Use this form to insert any additional services not listed above.">Prenatal Checkup</a>
 		</div>
-	<div class="col-md-5 col-12">
-		<button type="button" class="add" data-toggle="modal" data-target="#prenatalModal">Add service: Prenatal Checkup</button>
+		<div class="modal fade" id="otherModal" tabindex="-1" role="dialog" aria-labelledby="otherModalLabel" aria-hidden="true">
+		  <div class="modal-dialog" role="document">
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <h5 class="modal-title" id="otherModalLabel">Additional Service</h5>
+		        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+		        	<span aria-hidden="true">&times;</span>
+		        </button>
+		      </div>
+		      <div class="modal-body">
+			        <form id="other">
+			          <div class="form-group row">
+				    		<label class="col-sm-4 col-form-label">Service</label>
+							<div class="col-sm-4">
+			      				<input type="text" class="form-control" value="other" name="name">
+			    			</div>
+						</div>
+					    <div class="form-group row">
+				    		<label class="col-sm-4 col-form-label">Scheduled</label>
+							<div class="col-sm-4">
+			      				<input type="date" class="form-control" placeholder="DD/MM/YY" name="date">
+			    			</div>
+			    			<div class="col-sm-4 offset-sm-4 form-group row">
+			    				<label><input type="checkbox" name="completed" value="true"> Completed?</label>
+			  				</div>
+						</div>
+						<div class="form-group row">
+				    		<label class="col-sm-4 col-form-label">Provider</label>
+							<div class="col-sm-4">
+			      				<input type="text" class="form-control" placeholder="E.g. Dr. Virginia Smith" id="other_provider" name="provider">
+			    			</div>
+						</div>
+						<div class="form-group row">
+				    		<label class="col-sm-4 col-form-label">Location</label>
+							<div class="col-sm-4">
+			      				<input type="text" class="form-control" placeholder="E.g. Planned Parenthood" name="place">
+			    			</div>
+						</div>
+						<div class="form-group row">
+				    		<label class="col-sm-4 col-form-label">Notes</label>
+							<div class="col-sm-4">
+			      				<input type="text" class="form-control" placeholder="Notes/comments" name="note">
+			    			</div>
+						</div>
+			    		<button type="submit" form="other" id="other_button">Save Additional Service Info</button>
+		        	</form>
+		      	</div>
+		    </div>
+		</div>
 	</div>
-</div>
-
-<div class="modal fade" id="otherModal" tabindex="-1" role="dialog" aria-labelledby="otherModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="otherModalLabel">Prenatal Checkup</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <form id="prenatal">
-          <div class="form-group row">
-	    		<label class="col-sm-4 col-form-label">Service</label>
-				<div class="col-sm-4">
-      				<input type="text" class="form-control" value="other" name="name">
-    			</div>
-			</div>
-		    <div class="form-group row">
-	    		<label class="col-sm-4 col-form-label">Scheduled</label>
-				<div class="col-sm-4">
-      				<input type="date" class="form-control" placeholder="DD/MM/YY" name="date">
-    			</div>
-    			<div class="col-sm-4 offset-sm-4 form-group row">
-    				<label><input type="checkbox" name="completed" value="true"> Completed?</label>
-  				</div>
-			</div>
-			<div class="form-group row">
-	    		<label class="col-sm-4 col-form-label">Provider</label>
-				<div class="col-sm-4">
-      				<input type="text" class="form-control" placeholder="E.g. Dr. Virginia Smith" id="other_provider" name="provider">
-    			</div>
-			</div>
-			<div class="form-group row">
-	    		<label class="col-sm-4 col-form-label">Location</label>
-				<div class="col-sm-4">
-      				<input type="text" class="form-control" placeholder="E.g. Planned Parenthood" name="place">
-    			</div>
-			</div>
-			<div class="form-group row">
-	    		<label class="col-sm-4 col-form-label">Notes</label>
-				<div class="col-sm-4">
-      				<input type="text" class="form-control" placeholder="Notes/comments" name="note">
-    			</div>
-			</div>
-    		<button type="submit" form="prenatal" id="prenatal_button">Save Prenatal Checkup Info</button>
-        </form>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- MAMMOGRAM -->
-<div class="form-group row">
-
-<div class="col-sm-5 offset-2 col-12">
-	<img src="/../images/boobs.png">
-	    <a tabindex="0" role="button" data-container="body" class="btn btn-link btn-lg serviceName" data-toggle="popover" data-trigger="focus" data-placement="right" data-content="Annual preventive care visits are recommended for all healthy adults. Annual physicals may include screenings for diseases; assessing your risk for future problems; discussing lifestyle habits; and keeping vaccinations up to date.">Mammogram</a>
-</div>
-
-		<div class="col-sm-5 col-12">
-			<button type="button" class="add" data-toggle="modal" data-target="#mammogramModal">Add service: Mammogram</button>
-		</div>
-</div>
-
-<div class="modal fade" id="mammogramModal" tabindex="-1" role="dialog" aria-labelledby="mammogramModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-lg" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="physicalModalLabel">Mammogram</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-
-		<form id="physical" action="/myservices">
-			<div class="form-group row">
-	    		<label class="col-sm-4 col-form-label">Service</label>
-				<div class="col-sm-4">
-      				<input type="text" class="form-control" value="Mammogram" name="name">
-    			</div>
-			</div>
-		    <div class="form-group row">
-	    		<label class="col-sm-4 col-form-label">Scheduled</label>
-				<div class="col-sm-4">
-      				<input type="date" class="form-control" placeholder="DD/MM/YY" name="date">
-    			</div>
-    			<div class="col-sm-4 offset-sm-4 form-group row">
-    				<label><input type="checkbox" name="completed" value="true"> Completed?</label>
-  				</div>
-			</div>
-			<div class="form-group row">
-	    		<label class="col-sm-4 col-form-label">Provider</label>
-				<div class="col-sm-4">
-      				<input type="text" class="form-control" placeholder="E.g. Dr. Virginia Smith" id="physical_provider" name="provider">
-    			</div>
-			</div>
-			<div class="form-group row">
-	    		<label class="col-sm-4 col-form-label">Location</label>
-				<div class="col-sm-4">
-      				<input type="text" class="form-control" placeholder="E.g. Planned Parenthood" name="place">
-    			</div>
-			</div>
-			<div class="form-group row">
-	    		<label class="col-sm-4 col-form-label">Notes</label>
-				<div class="col-sm-4">
-      				<input type="text" class="form-control" placeholder="Notes/comments" name="note">
-    			</div>
-			</div>
-			<button type="submit" form="mammogram" id="hpv_button">Save Mammogram Info</button>
-		</form>
-		</div>
-    </div>
-  </div>
-</div>
-
-
-
-<!-- ADDITIONAL SERVICES/TEST -->
-<div class="form-group row">
-		<div class="col-md-5 offset-2 col-12">
-			<img src="/../images/doctor2.png">
-
-    		<a tabindex="0" role="button" data-container="body" class="btn btn-link btn-lg serviceName" data-toggle="popover" data-trigger="focus" data-placement="right" data-content="Use this form to insert any additional services not listed above.">Additional Service</a>
-		</div>
-	<div class="col-md-5 col-12">
-		<button type="button" class="add" data-toggle="modal" data-target="#otherModal">Add service: Additional</button>
-	</div>
-</div>
-
-<div class="modal fade" id="otherModal" tabindex="-1" role="dialog" aria-labelledby="otherModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="otherModalLabel">Additional Service</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <form id="other">
-          <div class="form-group row">
-	    		<label class="col-sm-4 col-form-label">Service</label>
-				<div class="col-sm-4">
-      				<input type="text" class="form-control" value="other" name="name">
-    			</div>
-			</div>
-		    <div class="form-group row">
-	    		<label class="col-sm-4 col-form-label">Scheduled</label>
-				<div class="col-sm-4">
-      				<input type="date" class="form-control" placeholder="DD/MM/YY" name="date">
-    			</div>
-    			<div class="col-sm-4 offset-sm-4 form-group row">
-    				<label><input type="checkbox" name="completed" value="true"> Completed?</label>
-  				</div>
-			</div>
-			<div class="form-group row">
-	    		<label class="col-sm-4 col-form-label">Provider</label>
-				<div class="col-sm-4">
-      				<input type="text" class="form-control" placeholder="E.g. Dr. Virginia Smith" id="other_provider" name="provider">
-    			</div>
-			</div>
-			<div class="form-group row">
-	    		<label class="col-sm-4 col-form-label">Location</label>
-				<div class="col-sm-4">
-      				<input type="text" class="form-control" placeholder="E.g. Planned Parenthood" name="place">
-    			</div>
-			</div>
-			<div class="form-group row">
-	    		<label class="col-sm-4 col-form-label">Notes</label>
-				<div class="col-sm-4">
-      				<input type="text" class="form-control" placeholder="Notes/comments" name="note">
-    			</div>
-			</div>
-    		<button type="submit" form="other" id="other_button">Save Additional Service Info</button>
-        </form>
-      </div>
-    </div>
-  </div>
-</div>
 </div>
 
 <!-- THESE MUST BE HERE IN ORDER FOR POPOVERS TO WORK! -->

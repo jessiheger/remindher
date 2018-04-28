@@ -1,8 +1,7 @@
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
-
-// define what a service looks like in the database
+// Model for each service
 var serviceSchema = new Schema (
 	{
 		name: String,
