@@ -39,9 +39,9 @@ p {
 	font-size: 1em;
 }
 
-a {
+a, .btn-link {
 	font-family: 'Rufina', serif;
-	color: #2F4F4F;
+	color: #26466D;
 }
 
 label {
@@ -62,7 +62,6 @@ li {
 	font-family: 'Julius Sans One', sans-serif;
 	font-size: 20px;
 	font-weight: bold;
-	/*padding-left: 15%;*/
 }
 
 .trashcan {
