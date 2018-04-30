@@ -18,14 +18,10 @@ An app empowering healthy women!
 ![screen shot 2018-04-30 at 11 36 21 am](https://user-images.githubusercontent.com/13025907/39443932-d0ad6576-4c6a-11e8-9f81-1c0fdc81cd92.png)
 
 ### Mobile Wire Frames
-![img_1104](https://user-images.githubusercontent.com/13025907/39447481-be84849a-4c76-11e8-830f-d9c1a721af34.PNG)
-![img_1105](https://user-images.githubusercontent.com/13025907/39447482-be9b2e2a-4c76-11e8-917b-0c29a17e65b8.PNG)
-![img_1106](https://user-images.githubusercontent.com/13025907/39447483-bebc9484-4c76-11e8-9eac-ddacbc5a94e5.PNG)
-![img_1107](https://user-images.githubusercontent.com/13025907/39447484-bed38040-4c76-11e8-805f-64c20d66af94.PNG)
-![img_1108](https://user-images.githubusercontent.com/13025907/39447485-bee84e12-4c76-11e8-96be-2aee2f648d9d.PNG)
-![img_1109](https://user-images.githubusercontent.com/13025907/39447486-bf1e8bc6-4c76-11e8-80ee-2478caf00ce2.PNG)
-![img_1110](https://user-images.githubusercontent.com/13025907/39447487-bf33e430-4c76-11e8-8d89-333093e78feb.PNG)
-![img_1111](https://user-images.githubusercontent.com/13025907/39447488-bf58bf80-4c76-11e8-8de8-f2b33d214d00.PNG)
+![img_1104](https://user-images.githubusercontent.com/13025907/39447592-26717b94-4c77-11e8-97b3-beea85c4f16e.PNG)![img_1105](https://user-images.githubusercontent.com/13025907/39447593-26957d64-4c77-11e8-9db0-cdf35cd27f65.PNG)
+![img_1106](https://user-images.githubusercontent.com/13025907/39447594-26ae6acc-4c77-11e8-82bb-0371af917f88.PNG)![img_1107](https://user-images.githubusercontent.com/13025907/39447595-26c3228c-4c77-11e8-9a85-506a11209bb2.PNG)
+![img_1108](https://user-images.githubusercontent.com/13025907/39447596-26db39da-4c77-11e8-92a8-a7b79f747e88.PNG)![img_1109](https://user-images.githubusercontent.com/13025907/39447597-26f1657a-4c77-11e8-84a3-b1f5a0199846.PNG)
+![img_1110](https://user-images.githubusercontent.com/13025907/39447598-270a12f0-4c77-11e8-9188-55df01c116a1.PNG)![img_1111](https://user-images.githubusercontent.com/13025907/39447599-2722dba0-4c77-11e8-8d12-3dfad02837ec.PNG)
 
 
 ### User Stories
