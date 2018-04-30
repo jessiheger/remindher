@@ -1,6 +1,6 @@
 module.exports = function(req, res, next){
 	if (!req.user) {
-		req.flash('error', 'You are not authorized to view this page. Please login.');
+		req.flash('error', 'Please login to view this page!');
 		res.redirect('/auth/login');
 	}
 	else {

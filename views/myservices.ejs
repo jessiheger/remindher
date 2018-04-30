@@ -48,7 +48,7 @@
 							<div class="form-group row">
 					    		<label class="col-sm-4 col-form-label">Provider</label>
 								<div class="col-sm-4">
-				      				<input type="text" class="form-control" placeholder="E.g. Dr. Virginia Smith" id="physical_provider" name="provider">
+				      				<input type="text" class="form-control" placeholder="E.g. Dr. Virginia Smith" name="provider">
 				    			</div>
 							</div>
 							<div class="form-group row">
@@ -141,7 +141,7 @@
 		</div>
 
 		<div class="modal fade" id="papModal" tabindex="-1" role="dialog" aria-labelledby="papModalLabel" aria-hidden="true">
-		  	<div class="modal-dialog" role="document">
+		  	<div class="modal-dialog modal-lg" role="document">
 			    <div class="modal-content">
 			      	<div class="modal-header">
 			        	<h5 class="modal-title" id="papModalLabel"> Pap Test</h5>
@@ -201,7 +201,7 @@
 			</div>
 		</div>
 		<div class="modal fade" id="hivModal" tabindex="-1" role="dialog" aria-labelledby="hivModalLabel" aria-hidden="true">
-		  	<div class="modal-dialog" role="document">
+		  	<div class="modal-dialog modal-lg" role="document">
 		    	<div class="modal-content">
 		      		<div class="modal-header">
 		        		<h5 class="modal-title" id="hivModalLabel">HIV/STI Test</h5>
@@ -255,14 +255,14 @@
 		    	
 		<div class="form-group row">
 			<div class="col-md-5 offset-md-2 col-12">
-				<a tabindex="0" role="button" data-container="body" class="btn btn-link btn-lg serviceName" data-toggle="popover" data-trigger="focus" data-placement="right" data-content="Use this form to insert any additional services not listed above."><img src="/../images/pregnant.png">Prenatal Checkup</a>
+				<a tabindex="0" role="button" data-container="body" class="btn btn-link btn-lg serviceName" data-toggle="popover" data-trigger="focus" data-placement="right" data-content="Consistent checkups during pregnancy can help keep you and your baby healthy, spot problems if they occur, and prevent problems during delivery. Typically, routine checkups occur: once each month for weeks four through 28, twice a month for weeks 28 through 36, and weekly for weeks 36 to birth."><img src="/../images/pregnant.png">Prenatal Checkup</a>
 			</div>
 			<div class="col-md-5 col-12">
 				<button type="button" class="add" data-toggle="modal" data-target="#prenatalModal">Add service: Prenatal Checkup</button>
 			</div>
 		</div>
-		<div class="modal fade" id="otherModal" tabindex="-1" role="dialog" aria-labelledby="otherModalLabel" aria-hidden="true">
-		  <div class="modal-dialog" role="document">
+		<div class="modal fade" id="prenatalModal" tabindex="-1" role="dialog" aria-labelledby="otherModalLabel" aria-hidden="true">
+		  <div class="modal-dialog modal-lg" role="document">
 		    <div class="modal-content">
 		      <div class="modal-header">
 		        <h5 class="modal-title" id="otherModalLabel">Prenatal Checkup</h5>
@@ -275,7 +275,7 @@
 			          	<div class="form-group row">
 				    		<label class="col-sm-4 col-form-label">Service</label>
 							<div class="col-sm-4">
-			      				<input type="text" class="form-control" value="other" name="name">
+			      				<input type="text" class="form-control" value="Prenatal Checkup" name="name">
 			    			</div>
 						</div>
 					    <div class="form-group row">
@@ -315,7 +315,7 @@
 		<!-- MAMMOGRAM -->
 		<div class="form-group row">
 			<div class="col-sm-5 offset-md-2 col-12">
-				<a tabindex="0" role="button" data-container="body" class="btn btn-link btn-lg serviceName" data-toggle="popover" data-trigger="focus" data-placement="right" data-content="Annual preventive care visits are recommended for all healthy adults. Annual physicals may include screenings for diseases; assessing your risk for future problems; discussing lifestyle habits; and keeping vaccinations up to date."><img src="/../images/boobs.png">Mammogram</a>
+				<a tabindex="0" role="button" data-container="body" class="btn btn-link btn-lg serviceName" data-toggle="popover" data-trigger="focus" data-placement="right" data-content="A breast cancer screening exam - also known as a mammogram - is recommended for women ages 50-74. Mammograms are recommended every other year for women of average risk of breast cancer."><img src="/../images/boobs.png">Mammogram</a>
 			</div>
 			<div class="col-sm-5 col-12">
 				<button type="button" class="add" data-toggle="modal" data-target="#mammogramModal">Add service: Mammogram</button>
@@ -382,7 +382,7 @@
 			</div>
 		</div>
 		<div class="modal fade" id="otherModal" tabindex="-1" role="dialog" aria-labelledby="otherModalLabel" aria-hidden="true">
-		  <div class="modal-dialog" role="document">
+		  <div class="modal-dialog modal-lg" role="document">
 		    <div class="modal-content">
 		      <div class="modal-header">
 		        <h5 class="modal-title" id="otherModalLabel">Additional Service</h5>

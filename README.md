@@ -1,13 +1,23 @@
 # remind(h)er
 
 ### Description:
-A mobile app that allows women to learn about the recommended reproductive health examinations/tests for their age range (per USG guidelines); where the nearest OB/GYN is located; and to record information about those services once scheduled/completed.
+An app empowering healthy women!
+
+1. Learn about recommended reproductive health examinations and services, 
+2. Find where the nearest OB/GYN is located, and
+3. Record information about those services once scheduled or completed.
 
 ### User Stories
+This app is desined as an educational resource/reminder checklist/medical history for women's reproductive health. The services listed range from annual exams to HPV vaccines, to mammograms, and is thus available to women of all ages.
 
 ### Technologies Used + descriptions
+- This is an express app built using Node and Mongoose.
+- Each web page was designed using EJS, CSS, and JavaScript.
+- The database is structured with two models - one embedded within the other.
+
 
 ### APIs used + descriptions
+There are two APIs being accessed within this app. The first is [ZipCodeAPI](https://www.zipcodeapi.com/), which takes the user's zipcode (provided at sign up), and access the corresponding Latitude and Longitude. The next is the [Google Place API Web Search](https://developers.google.com/places/web-service/search), which takes the Lat and Long and queries nearby gynecologists. These two APIs together create the results that you'll find at https://remindher.herokuapp.com/find.
 
 ### Modules used + descriptions
 
@@ -27,3 +37,15 @@ A mobile app that allows women to learn about the recommended reproductive healt
 	- Syringe by Gregor Cresnar from the Noun Project
 	- Pregnant by BomSymbols from the Noun Project
 	- boobs by Gregor Cresnar from the Noun Project
+
+
+Preganancy:
+https://www.womenshealth.gov/pregnancy/youre-pregnant-now-what/prenatal-care-and-tests
+
+HPV:
+https://www.cdc.gov/hpv/parents/vaccine.html
+
+STD:
+https://www.cdc.gov/std/prevention/screeningreccs.htm
+
+https://www.prevention.com/health/9-most-important-medical-tests-for-women/slide/3
