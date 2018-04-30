@@ -10,6 +10,11 @@ body {
 	display: inline;
 }
 
+.h1:hover { 
+	color: #2f4f4f;
+    text-decoration: none;
+}
+
 span {
 	font-family: 'Montserrat Alternates', sans-serif;
 	text-transform: lowercase;
@@ -29,7 +34,6 @@ h2 {
 
 h4, {
 	font-family: 'Julius Sans One', sans-serif;
-	/*color: #2F4F4F;*/
 	color: black;
 	font-size: 2em;
 }
@@ -60,7 +64,6 @@ label {
 	font-family: 'Josefin Slab', serif;
 	font-size: 1em;
 	text-transform: uppercase;
-	/*color: #2F4F4F;*/
 	color: black;
 	font-weight: bolder;
 
@@ -78,9 +81,9 @@ li {
 }
 
 .trashcan {
-	float: right;
-	margin-right: 10px;
-	
+	cursor: pointer;
+	float:right;
+	margin-right: 2%;
 }
 
 button {

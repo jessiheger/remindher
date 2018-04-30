@@ -30,9 +30,8 @@ router.post('/signup', function(req,res, next) {
 	User.findOne({email: req.body.email}, function(err, user){
 		if (err) { // an unspecified error
 			console.log('this is the error:', err);
-			// flash(type, message)
 			req.flash('error', 'Try again!');
-			res.redirect('/auth/signup'); //send them back to same page
+			res.redirect('/auth/signup');
 		}
 		else if (user) { // user already exists
 			req.flash('error', 'Email already exists!')

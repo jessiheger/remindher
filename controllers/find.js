@@ -8,7 +8,6 @@ var newLng;
 var newLocation;
 require('dotenv').config();
 
-//includ the user model
 var User 			= require('../models/user');
 
 // include api keys
@@ -19,24 +18,24 @@ var SECRET_KEY_GOOGLE = process.env.SECRET_KEY_GOOGLE;
 router.get('/', isLoggedIn, function(req, res) {
     userLocation = req.user.location;
 
+// convert zipcode to Lat and Long coordinates
     var findLatLong =`https://www.zipcodeapi.com/rest/${SECRET_KEY_ZIP}/info.json/${userLocation}/degrees`;
 
     request(findLatLong, function (error, response, body) {
         let unstringifiedLat = JSON.parse(body).lat;
         let unstringifiedLng = JSON.parse(body).lng;
 
+//find doctors based on acquired Lat and Long coordinates
         var findDoctors = `https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=${unstringifiedLat},${unstringifiedLng}&radius=40000&keyword=gynecologist&key=${SECRET_KEY_GOOGLE}`;
 
         request(findDoctors, function (error, response, results) {
             var doctors = JSON.parse(results);
-            // console.log("#####", doctors);//this is working
             res.render("find", {doctors: doctors});
-            // res.send(doctors);
-
         });
     });
 });
 
+// Changes the zipcode of the user 
 router.put('/', isLoggedIn, function(req, res) {
     console.log("req.body is:", req.body);
     User.findByIdAndUpdate(res.locals.currentUser, 

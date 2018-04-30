@@ -7,5 +7,3 @@ module.exports = function(req, res, next){
 		next();
 	}
 }
-
-// module.export is at the very beginning!

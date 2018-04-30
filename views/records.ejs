@@ -4,8 +4,7 @@
     <% currentUser.services.forEach(function(service){ %>
     	<div class= "serviceSection">
             <h2><%= service.name %> </h2>
-            <button class="trashcan" data-id="<%= service._id %>">DELETE</button>
-            <!-- <img src="/../images/trashcan.png"> -->
+            <img class="trashcan" src="/../images/trashcan.png" data-id="<%= service._id %>">
             <ul>
                 <li>Date: <%= service.date %></li>
                 <%if (service.completed == true) {%>

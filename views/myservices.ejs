@@ -9,31 +9,135 @@
 	<div class="container smallDiv">
 		<p class="context">Click on the name of a service to learn more about it, and/or click the associated button to add information about an upcoming or completed service! You'll find your list of saved services in My Records.</p>
 
-<!-- ANNUAL PHYSICAL EXAM -->
+<% let servicesArr = ['Annual Physical Exam', 'HPV Vaccine', 'Pap Test', 'HIV and STI Test', 'Prenatal Checkup', 'Mammogram', 'Additional Service'];
+let dataContent, img, aName, addName, modalId, dataTarget, ariaLabelledBy, h5Text, formId, inputValue, buttonForm, buttonText;
+%>
+<% servicesArr.forEach((services) => {
+	switch (services) {
+      case 'Annual Physical Exam':
+	      dataContent = 'Annual preventive care visits are recommended for all healthy adults. Annual physicals may include screenings for diseases; assessing your risk for future problems; discussing lifestyle habits; and keeping vaccinations up to date.'
+	      img = "/../images/physical.png";
+	      aName = 'Physical Exam';
+	      addName = 'Add service: Physical Exam';
+	      modalId = 'physicalModal';
+	      dataTarget = '#physicalModal';
+	      ariaLabelledBy = 'physicalModalLabel';
+	      h5Text = 'Annual Physical Exam';
+	      formId = 'physical';
+	      inputValue = 'Annual Physical Exam';
+	      buttonForm = 'physical';
+	      buttonText = 'Save Physical Exam Info';
+	    break;
+	  case 'HPV Vaccine':
+	  	  dataContent = "The HPV vaccine protects against cancers caused by human papillomavirus (HPV) infection, including but not limited to cancers of the cervix, vagina, and vulva. The vaccine involves 3 shots given over a 6-month period, and is recommended for young women through age 26, and young men through age 21.";
+	      img = "/../images/syringe.png";
+	      aName = ' HPV Vaccine';
+	      addName = 'Add service: HPV Vaccine';
+	      modalId = 'hpvModal';
+	      dataTarget = '#hpvModal';
+	      ariaLabelledBy = 'hpvModalLabel';
+	      h5Text = 'HPV Vaccine';
+	      formId = 'hpv';
+	      inputValue = 'HPV Vaccine';
+	      buttonForm = 'hpv';
+	      buttonText = 'Save HPV Vaccine Info';
+	    break;
+	  case 'Pap Test':
+	  	  dataContent = "Pap tests screen for abnormalities that could indicate pre- or early cervical cancer. Women ages 21-29 should receive a Pap test every 3 years. If you are over age 30 and your Pap smear and HPV test are normal, you only need a Pap smear every 5 years.";
+	      img = "/../images/body.png";
+	      aName = ' Pap Test';
+	      addName = 'Add service: Pap Test';
+	      modalId = 'papModal';
+	      dataTarget = '#papModal';
+	      ariaLabelledBy = 'papModalLabel';
+	      h5Text = 'Pap Test';
+	      formId = 'pap';
+	      inputValue = 'Pap Test';
+	      buttonForm = 'pap';
+	      buttonText = 'Save Pap Test Info';
+	    break;
+	  case 'HIV and STI Test':
+	  	  dataContent = "HIV and STI tests prevent the spread of HIV and other STDs, many of which can only be detected through testing. All sexually active women and their partners should be tested for HIV and other STIs before starting sexual activity.";
+	      img = "/../images/heart.png";
+	      aName = ' HIV and STI Test';
+	      addName = 'Add service: HIV/STI Test';
+	      modalId = 'hivModal';
+	      dataTarget = '#hivModal';
+	      ariaLabelledBy = 'hivModalLabel';
+	      h5Text = 'HIV/STI Test';
+	      formId = 'hiv';
+	      inputValue = 'HIV/STI Test';
+	      buttonForm = 'hiv';
+	      buttonText = 'Save HIV/STI Test Info';
+	    break;
+	  case 'Prenatal Checkup':
+	  	  dataContent = "Consistent checkups during pregnancy can help keep you and your baby healthy, spot problems if they occur, and prevent problems during delivery. Typically, routine checkups occur: once each month for weeks four through 28, twice a month for weeks 28 through 36, and weekly for weeks 36 to birth.";
+	  	  img = "/../images/pregnant.png";
+	      aName = 'Prenatal Checkup';
+	      addName = 'Add service: Prenatal Checkup';
+	      modalId = 'prenatalModal';
+	      dataTarget = '#prenatalModal';
+	      ariaLabelledBy = 'prenatalModalLabel';
+	      h5Text = 'Prenatal Checkup';
+	      formId = 'prenatal';
+	      inputValue = 'Prenatal Checkup';
+	      buttonForm = 'prenatal';
+	      buttonText = 'Save Prenatal Checkup Info';
+	    break;
+	  case 'Mammogram':
+	  	  dataContent = "A breast cancer screening exam - also known as a mammogram - is recommended for women ages 50-74. Mammograms are recommended every other year for women of average risk of breast cancer.";
+	  	  img = "/../images/boobs.png";
+	      aName = 'Mammogram';
+	      addName = 'Add service: Mammogram';
+	      modalId = 'mammogramModal';
+	      dataTarget = '#mammogramModal';
+	      ariaLabelledBy = 'mammogramModalLabel';
+	      h5Text = 'Mammogram';
+	      formId = 'mammogram';
+	      inputValue = 'Mammogram';
+	      buttonForm = 'mammogram';
+	      buttonText = 'Save Mammogram Info';
+	    break;
+	  case 'Additional Service':
+	  	  dataContent = "Use this form to insert any additional services not listed above.";
+	  	  img = "/../images/doctor2.png";
+	      aName = 'Additional Service';
+	      addName = 'Add Additional Service';
+	      modalId = 'additionalModal';
+	      dataTarget = '#additionalModal';
+	      ariaLabelledBy = 'additionalModalLabel';
+	      h5Text = 'Additional Service';
+	      formId = 'additional';
+	      inputValue = 'Additional Service';
+	      buttonForm = 'additional';
+	      buttonText = 'Save Additional Service Info';
+	    break;
+	  }
+      %>
 		<div class="form-group row">
 			<div class="col-sm-5 offset-md-2 col-12">
-				<a tabindex="0" role="button" data-container="body" class="btn btn-link btn-lg serviceName" data-toggle="popover" data-trigger="focus" data-placement="right" data-content="Annual preventive care visits are recommended for all healthy adults. Annual physicals may include screenings for diseases; assessing your risk for future problems; discussing lifestyle habits; and keeping vaccinations up to date."><img src="/../images/physical.png"> Physical Exam</a>
+				<a tabindex="0" role="button" data-container="body" class="btn btn-link btn-lg serviceName" data-toggle="popover" data-trigger="focus" data-placement="right" data-content="<%= dataContent %>"><img src="<%= img %>"><%= aName %></a>
 			</div>
 			<div class="col-sm-5 col-12">
-				<button type="button" class="add" data-toggle="modal" data-target="#physicalModal">Add service: Physical Exam</button>
+				<button type="button" class="add" data-toggle="modal" data-target="<%= dataTarget %>" ><%= addName %></button>
 			</div>
 		</div>
 
-		<div class="modal fade" id="physicalModal" tabindex="-1" role="dialog" aria-labelledby="physicalModalLabel" aria-hidden="true">
+		<div class="modal fade" id="<%= modalId %>" tabindex="-1" role="dialog" aria-labelledby="<%= ariaLabelledBy %>" aria-hidden="true">
 		  	<div class="modal-dialog modal-lg" role="document">
 		   		<div class="modal-content">
 		      		<div class="modal-header">
-		        		<h5 class="modal-title" id="physicalModalLabel">Annual Physical Exam</h5>
+		        		<h5 class="modal-title"><%= h5Text %></h5>
 		        		<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 		          			<span aria-hidden="true">&times;</span>
 		        		</button>
 		      		</div>
 			      	<div class="modal-body">
-			      		<form id="physical" action="/myservices">
+			      		<form id='<%= formId %>' action="/myservices">
 							<div class="form-group row">
 					    		<label class="col-sm-4 col-form-label">Service</label>
 								<div class="col-sm-4">
-				      				<input type="text" class="form-control" value="Annual Physical Exam" name="name">
+				      				<input type="text" class="form-control" value="<%= inputValue %>" name="name">
 				    			</div>
 							</div>
 						    <div class="form-group row">
@@ -48,392 +152,31 @@
 							<div class="form-group row">
 					    		<label class="col-sm-4 col-form-label">Provider</label>
 								<div class="col-sm-4">
-				      				<input type="text" class="form-control" placeholder="E.g. Dr. Virginia Smith" name="provider">
+				      				<input type="text" class="form-control" placeholder="Dr. Virginia Smith" onfocus="this.placeholder = ''"  onblur="this.placeholder='Dr.Virginia Smith'" name="provider">
 				    			</div>
 							</div>
 							<div class="form-group row">
 					    		<label class="col-sm-4 col-form-label">Location</label>
 								<div class="col-sm-4">
-				      				<input type="text" class="form-control" placeholder="E.g. Planned Parenthood" name="place">
+				      				<input type="text" class="form-control" placeholder="Planned Parenthood" onfocus="this.placeholder = ''"  onblur="this.placeholder='Planned Parenthood'" name="place">
 				    			</div>
 							</div>
 							<div class="form-group row">
 					    		<label class="col-sm-4 col-form-label">Notes</label>
 								<div class="col-sm-4">
-				      				<input type="text" class="form-control" placeholder="Notes/comments" name="note">
+				      				<input type="text" class="form-control" placeholder="Notes/comments" onfocus="this.placeholder = ''"  onblur="this.placeholder='Notes/comments'" name="note">
 				    			</div>
 							</div>
-							<button type="submit" form="physical" id="hpv_button">Save Physical Exam Info</button>
+							<button id="closeForm" type="submit" form="<%= buttonForm %>"><%= buttonText %></button>
 						</form>
 					</div>
 		    	</div>
 			</div>
 		</div>
+<% }) %>
 
-		<!-- HPV VACCINE  -->
-		<div class="form-group row">
-			<div class="col-md-5 offset-md-2 col-12">
-				<a tabindex="0" role="button" data-container="body" class="btn btn-link btn-lg serviceName" data-toggle="popover" data-trigger="focus" data-placement="right" data-content="The HPV vaccine protects against cancers caused by human papillomavirus (HPV) infection, including but not limited to cancers of the cervix, vagina, and vulva. The vaccine involves 3 shots given over a 6-month period, and is recommended for young women through age 26, and young men through age 21."><img src="/../images/syringe.png"> HPV Vaccine</a>	
-			</div>		
-			<div class="col-md-5 col-12">
-				<button type="button" class="add" data-toggle="modal" data-target="#hpvModal">Add service: HPV Vaccine</button>
-			</div>
-		</div>
-		<div class="modal fade" id="hpvModal" tabindex="-1" role="dialog" aria-labelledby="hpvModalLabel" aria-hidden="true">
-		  	<div class="modal-dialog modal-lg" role="document">
-		    	<div class="modal-content">
-		      		<div class="modal-header">
-		        		<h5 class="modal-title" id="hpvModalLabel">HPV vaccine</h5>
-		        		<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-		          			<span aria-hidden="true">&times;</span>
-		        		</button>
-		      		</div>
-			      	<div class="modal-body">
-			      		<form id="hpv">
-							<div class="form-group row">
-					    		<label class="col-sm-4 col-form-label">Service</label>
-								<div class="col-sm-4">
-				      				<input type="text" class="form-control" value="HVP Shot" name="name">
-				    			</div>
-							</div>
-							<div class="form-group row">
-							    <label class="col-sm-4 col-form-label">Date</label>
-								    <div class="col-sm-4">
-								      <input type="date" class="form-control" placeholder="DD/MM/YY" name="date">
-								    </div>
-								     <div class="col-sm-4 offset-sm-4 form-group row">
-				    					<label><input type="checkbox" value="true"> Completed?</label>
-				  					</div>
-							</div>
-							<div class="form-group row">
-					    		<label class="col-sm-4 col-form-label">Provider</label>
-								<div class="col-sm-4">
-				      				<input type="text" class="form-control" placeholder="E.g. Dr. Virginia Smith" id="hpv_provider" name="provider">
-				    			</div>
-							</div>
-							<div class="form-group row">
-					    		<label class="col-sm-4 col-form-label">Location</label>
-								<div class="col-sm-4">
-				      				<input type="text" class="form-control" placeholder="E.g. Planned Parenthood" name="place">
-				    			</div>
-							</div>
-							<div class="form-group row">
-					    		<label class="col-sm-4 col-form-label">Notes</label>
-								<div class="col-sm-4">
-				      				<input type="text" class="form-control" placeholder="Notes/comments" name="note">
-				    			</div>
-							</div>
-							<button type="submit" form="hpv" id="hpv_button">Save HPV Vaccine Info</button>
-						</form>
-					</div>
-		    	</div>
-			</div>
-		</div>
 
-		<!-- PAP TEST -->
-		<div class="form-group row">
-			<div class="col-md-5 offset-md-2 col-12">
-				<a tabindex="0" role="button" data-container="body" class="btn btn-link btn-lg serviceName" data-toggle="popover" data-trigger="focus" data-placement="right" data-content="Pap tests screen for abnormalities that could indicate pre- or early cervical cancer. Women ages 21-29 should receive a Pap test every 3 years. If you are over age 30 and your Pap smear and HPV test are normal, you only need a Pap smear every 5 years."><img src="/../images/body.png"> Pap Test</a>
-			</div>
-			<div class="col-md-5 col-12">
-				<button type="button" class="add" data-toggle="modal" data-target="#papModal">Add service: Pap Test</button>
-			</div>
-		</div>
-
-		<div class="modal fade" id="papModal" tabindex="-1" role="dialog" aria-labelledby="papModalLabel" aria-hidden="true">
-		  	<div class="modal-dialog modal-lg" role="document">
-			    <div class="modal-content">
-			      	<div class="modal-header">
-			        	<h5 class="modal-title" id="papModalLabel"> Pap Test</h5>
-			        	<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-			          		<span aria-hidden="true">&times;</span>
-			        	</button>
-			      	</div>
-			    	<div class="modal-body">
-			      		<form id="pap">
-						    <div class="form-group row">
-					    		<label class="col-sm-4 col-form-label">Service</label>
-								<div class="col-sm-4">
-				      				<input type="text" class="form-control" value="PAP Test" name="name">
-				    			</div>
-							</div>
-						    <div class="form-group row">
-					    		<label class="col-sm-4 col-form-label">Scheduled</label>
-								<div class="col-sm-4">
-				      				<input type="date" class="form-control" placeholder="DD/MM/YY" name="date">
-				    			</div>
-				    			<div class="col-sm-4 offset-sm-4 form-group row">
-				    				<label><input type="checkbox" name="completed" value="true"> Completed?</label>
-				  				</div>
-							</div>
-							<div class="form-group row">
-					    		<label class="col-sm-4 col-form-label">Provider</label>
-								<div class="col-sm-4">
-				      				<input type="text" class="form-control" placeholder="E.g. Dr. Virginia Smith" id="pap_provider" name="provider">
-				    			</div>
-							</div>
-							<div class="form-group row">
-					    		<label class="col-sm-4 col-form-label">Location</label>
-								<div class="col-sm-4">
-				      				<input type="text" class="form-control" placeholder="E.g. Planned Parenthood" name="place">
-				    			</div>
-							</div>
-							<div class="form-group row">
-					    		<label class="col-sm-4 col-form-label">Notes</label>
-								<div class="col-sm-4">
-				      				<input type="text" class="form-control" placeholder="Notes/comments" name="note">
-				    			</div>
-							</div>
-				    		<button type="submit" form="pap" id="pap_button">Save Pap Test Info</button>
-			    		</form>
-			    	</div>
-			    </div>
-			</div>
-		</div>
-
-		<!-- HIV AND STI TEST -->
-		<div class="form-group row">
-			<div class="col-md-5 offset-md-2 col-12">
-				<a tabindex="0" role="button" data-container="body" class="btn btn-link btn-lg serviceName" data-toggle="popover" data-trigger="focus" data-placement="right" data-content="HIV and STI tests prevent the spread of HIV and other STDs, many of which can only be detected through testing. All sexually active women and their partners should be tested for HIV and other STIs before starting sexual activity."><img src="/../images/heart2.png"> HIV and STI Test</a>
-			</div>
-			<div class="col-md-5 col-12">
-				<button type="button" class="add" data-toggle="modal" data-target="#hivModal">Add service: HIV/STI Test</button>
-			</div>
-		</div>
-		<div class="modal fade" id="hivModal" tabindex="-1" role="dialog" aria-labelledby="hivModalLabel" aria-hidden="true">
-		  	<div class="modal-dialog modal-lg" role="document">
-		    	<div class="modal-content">
-		      		<div class="modal-header">
-		        		<h5 class="modal-title" id="hivModalLabel">HIV/STI Test</h5>
-		        		<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-		        			<span aria-hidden="true">&times;</span>
-		        		</button>
-		      		</div>
-		      	<div class="modal-body">
-		      		<form id="sti">
-					    <div class="form-group row">
-				    		<label class="col-sm-4 col-form-label">Service</label>
-							<div class="col-sm-4">
-			      				<input type="text" class="form-control" value="HIV/STI Test" name="name">
-			    			</div>
-						</div>
-					    <div class="form-group row">
-				    		<label class="col-sm-4 col-form-label">Scheduled</label>
-							<div class="col-sm-4">
-			      				<input type="date" class="form-control" placeholder="DD/MM/YY" name="date">
-			    			</div>
-			    			<div class="col-sm-4 offset-sm-4 form-group row">
-			    				<label><input type="checkbox" name="completed" value="true"> Completed?</label>
-			  				</div>
-						</div>
-						<div class="form-group row">
-				    		<label class="col-sm-4 col-form-label">Provider</label>
-							<div class="col-sm-4">
-			      				<input type="text" class="form-control" placeholder="E.g. Dr. Virginia Smith" id="hivsti_provider" name="provider">
-			    			</div>
-						</div>
-						<div class="form-group row">
-				    		<label class="col-sm-4 col-form-label">Location</label>
-							<div class="col-sm-4">
-			      				<input type="text" class="form-control" placeholder="E.g. Planned Parenthood" name="place">
-			    			</div>
-						</div>
-							<div class="form-group row">
-				    			<label class="col-sm-4 col-form-label">Notes</label>
-								<div class="col-sm-4">
-			      					<input type="text" class="form-control" placeholder="Notes/comments" name="note">
-			    				</div>
-							</div>
-			    			<button type="submit" form="sti" id="hivsti_button">Save HIV/STI Test Info</button>
-		    			</form>
-		    		</div>
-		    	</div>
-			</div>
-		</div>
-
-		<!-- PRENATAL CHECKUP -->
-		    	
-		<div class="form-group row">
-			<div class="col-md-5 offset-md-2 col-12">
-				<a tabindex="0" role="button" data-container="body" class="btn btn-link btn-lg serviceName" data-toggle="popover" data-trigger="focus" data-placement="right" data-content="Consistent checkups during pregnancy can help keep you and your baby healthy, spot problems if they occur, and prevent problems during delivery. Typically, routine checkups occur: once each month for weeks four through 28, twice a month for weeks 28 through 36, and weekly for weeks 36 to birth."><img src="/../images/pregnant.png">Prenatal Checkup</a>
-			</div>
-			<div class="col-md-5 col-12">
-				<button type="button" class="add" data-toggle="modal" data-target="#prenatalModal">Add service: Prenatal Checkup</button>
-			</div>
-		</div>
-		<div class="modal fade" id="prenatalModal" tabindex="-1" role="dialog" aria-labelledby="otherModalLabel" aria-hidden="true">
-		  <div class="modal-dialog modal-lg" role="document">
-		    <div class="modal-content">
-		      <div class="modal-header">
-		        <h5 class="modal-title" id="otherModalLabel">Prenatal Checkup</h5>
-		        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-		        	<span aria-hidden="true">&times;</span>
-		        </button>
-		      </div>
-		      <div class="modal-body">
-		      		<form id="prenatal">
-			          	<div class="form-group row">
-				    		<label class="col-sm-4 col-form-label">Service</label>
-							<div class="col-sm-4">
-			      				<input type="text" class="form-control" value="Prenatal Checkup" name="name">
-			    			</div>
-						</div>
-					    <div class="form-group row">
-				    		<label class="col-sm-4 col-form-label">Scheduled</label>
-							<div class="col-sm-4">
-			      				<input type="date" class="form-control" placeholder="DD/MM/YY" name="date">
-			    			</div>
-			    			<div class="col-sm-4 offset-sm-4 form-group row">
-			    				<label><input type="checkbox" name="completed" value="true"> Completed?</label>
-			  				</div>
-						</div>
-						<div class="form-group row">
-				    		<label class="col-sm-4 col-form-label">Provider</label>
-							<div class="col-sm-4">
-			      				<input type="text" class="form-control" placeholder="E.g. Dr. Virginia Smith" id="other_provider" name="provider">
-			    			</div>
-						</div>
-						<div class="form-group row">
-				    		<label class="col-sm-4 col-form-label">Location</label>
-							<div class="col-sm-4">
-			      				<input type="text" class="form-control" placeholder="E.g. Planned Parenthood" name="place">
-			    			</div>
-						</div>
-						<div class="form-group row">
-				    		<label class="col-sm-4 col-form-label">Notes</label>
-							<div class="col-sm-4">
-			      				<input type="text" class="form-control" placeholder="Notes/comments" name="note">
-			    			</div>
-						</div>
-			    		<button type="submit" form="prenatal" id="prenatal_button">Save Prenatal Checkup Info</button>
-		        	</form>
-		      	</div>
-		    </div>
-		</div>
-	</div>
-
-		<!-- MAMMOGRAM -->
-		<div class="form-group row">
-			<div class="col-sm-5 offset-md-2 col-12">
-				<a tabindex="0" role="button" data-container="body" class="btn btn-link btn-lg serviceName" data-toggle="popover" data-trigger="focus" data-placement="right" data-content="A breast cancer screening exam - also known as a mammogram - is recommended for women ages 50-74. Mammograms are recommended every other year for women of average risk of breast cancer."><img src="/../images/boobs.png">Mammogram</a>
-			</div>
-			<div class="col-sm-5 col-12">
-				<button type="button" class="add" data-toggle="modal" data-target="#mammogramModal">Add service: Mammogram</button>
-			</div>
-		</div>
-		<div class="modal fade" id="mammogramModal" tabindex="-1" role="dialog" aria-labelledby="mammogramModalLabel" aria-hidden="true">
-		  <div class="modal-dialog modal-lg" role="document">
-		    <div class="modal-content">
-		      <div class="modal-header">
-		        <h5 class="modal-title" id="physicalModalLabel">Mammogram</h5>
-		        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-		        	<span aria-hidden="true">&times;</span>
-		        </button>
-		      </div>
-		      <div class="modal-body">
-					<form id="physical" action="/myservices">
-						<div class="form-group row">
-				    		<label class="col-sm-4 col-form-label">Service</label>
-							<div class="col-sm-4">
-			      				<input type="text" class="form-control" value="Mammogram" name="name">
-			    			</div>
-						</div>
-					    <div class="form-group row">
-				    		<label class="col-sm-4 col-form-label">Scheduled</label>
-							<div class="col-sm-4">
-			      				<input type="date" class="form-control" placeholder="DD/MM/YY" name="date">
-			    			</div>
-			    			<div class="col-sm-4 offset-sm-4 form-group row">
-			    				<label><input type="checkbox" name="completed" value="true"> Completed?</label>
-			  				</div>
-						</div>
-						<div class="form-group row">
-				    		<label class="col-sm-4 col-form-label">Provider</label>
-							<div class="col-sm-4">
-			      				<input type="text" class="form-control" placeholder="E.g. Dr. Virginia Smith" id="physical_provider" name="provider">
-			    			</div>
-						</div>
-						<div class="form-group row">
-				    		<label class="col-sm-4 col-form-label">Location</label>
-							<div class="col-sm-4">
-			      				<input type="text" class="form-control" placeholder="E.g. Planned Parenthood" name="place">
-			    			</div>
-						</div>
-						<div class="form-group row">
-				    		<label class="col-sm-4 col-form-label">Notes</label>
-							<div class="col-sm-4">
-			      				<input type="text" class="form-control" placeholder="Notes/comments" name="note">
-			    			</div>
-						</div>
-						<button type="submit" form="mammogram" id="hpv_button">Save Mammogram Info</button>
-					</form>
-				</div>
-		    </div>
-		</div>
-	</div>
-
-		<!-- ADDITIONAL SERVICES/TEST -->
-		<div class="form-group row">
-			<div class="col-md-5 offset-md-2 col-12">
-				<a tabindex="0" role="button" data-container="body" class="btn btn-link btn-lg serviceName" data-toggle="popover" data-trigger="focus" data-placement="right" data-content="Use this form to insert any additional services not listed above."><img src="/../images/doctor2.png"> Additional Service</a>
-			</div>
-			<div class="col-md-5 col-12">
-				<button type="button" class="add" data-toggle="modal" data-target="#otherModal">Add service: Additional</button>
-			</div>
-		</div>
-		<div class="modal fade" id="otherModal" tabindex="-1" role="dialog" aria-labelledby="otherModalLabel" aria-hidden="true">
-		  <div class="modal-dialog modal-lg" role="document">
-		    <div class="modal-content">
-		      <div class="modal-header">
-		        <h5 class="modal-title" id="otherModalLabel">Additional Service</h5>
-		        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-		        	<span aria-hidden="true">&times;</span>
-		        </button>
-		      </div>
-		      <div class="modal-body">
-			        <form id="other">
-			          <div class="form-group row">
-				    		<label class="col-sm-4 col-form-label">Service</label>
-							<div class="col-sm-4">
-			      				<input type="text" class="form-control" value="other" name="name">
-			    			</div>
-						</div>
-					    <div class="form-group row">
-				    		<label class="col-sm-4 col-form-label">Scheduled</label>
-							<div class="col-sm-4">
-			      				<input type="date" class="form-control" placeholder="DD/MM/YY" name="date">
-			    			</div>
-			    			<div class="col-sm-4 offset-sm-4 form-group row">
-			    				<label><input type="checkbox" name="completed" value="true"> Completed?</label>
-			  				</div>
-						</div>
-						<div class="form-group row">
-				    		<label class="col-sm-4 col-form-label">Provider</label>
-							<div class="col-sm-4">
-			      				<input type="text" class="form-control" placeholder="E.g. Dr. Virginia Smith" id="other_provider" name="provider">
-			    			</div>
-						</div>
-						<div class="form-group row">
-				    		<label class="col-sm-4 col-form-label">Location</label>
-							<div class="col-sm-4">
-			      				<input type="text" class="form-control" placeholder="E.g. Planned Parenthood" name="place">
-			    			</div>
-						</div>
-						<div class="form-group row">
-				    		<label class="col-sm-4 col-form-label">Notes</label>
-							<div class="col-sm-4">
-			      				<input type="text" class="form-control" placeholder="Notes/comments" name="note">
-			    			</div>
-						</div>
-			    		<button type="submit" form="other" id="other_button">Save Additional Service Info</button>
-		        	</form>
-		      	</div>
-		    </div>
-		</div>
-	</div>
-</div>
-
-<!-- THESE MUST BE HERE IN ORDER FOR POPOVERS TO WORK! -->
+<!-- THESE MUST BE HERE IN ORDER FOR POPOVERS TO WORK -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>

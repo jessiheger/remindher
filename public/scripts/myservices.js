@@ -20,15 +20,17 @@ $(document).ready(function() {
           data: formData,
           success: addServiceSuccess,
           error: addServiceError
-      }).then(function(data){
+      }).then(function(){
+        console.log("hit the then promise!");
       });
   });
 
   function addServiceSuccess() {
-    
+    req.flash('success', 'Record added!');
   }
 
   function addServiceError() {
+    req.flash('error', 'Try again!')
   }
   
 $("#button1").click(function(){
