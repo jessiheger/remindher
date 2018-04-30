@@ -71,19 +71,25 @@ There are two APIs being accessed within this app. The first is [ZipCodeAPI](htt
 - request
 
 ### Code snippet
-The following code adds a specific service to the user's records:
+The following code finds doctors based on your zipcode provided at sign up:
 
-    router.post('/', isLoggedIn, function(req, res) {
-      User.findById(res.locals.currentUser.id, (err, user) => {
-          // console.log(req.body)
-        Service.create(req.body, (err, service) => {
-            // console.log(err)
-            user.services.push(service); 
-            user.save();
-        })
-      });
-      res.send("success");
+router.get('/', isLoggedIn, function(req, res) {
+    userLocation = req.user.location;
+
+    var findLatLong =`https://www.zipcodeapi.com/rest/${SECRET_KEY_ZIP}/info.json/${userLocation}/degrees`;
+
+    request(findLatLong, function (error, response, body) {
+        let unstringifiedLat = JSON.parse(body).lat;
+        let unstringifiedLng = JSON.parse(body).lng;
+
+        var findDoctors = `https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=${unstringifiedLat},${unstringifiedLng}&radius=40000&keyword=gynecologist&key=${SECRET_KEY_GOOGLE}`;
+        
+        request(findDoctors, function (error, response, results) {
+            var doctors = JSON.parse(results);
+            res.render("find", {doctors: doctors});
+        });
     });
+});
 
 ### Future fixes/features
 - Birth year is a property requested from the user upon sign up, however it is not being used right now. Ideally, I would like the Add Services page to populate possible services based on the age (E.g. a 21 year old would not see the Mammogram option, etc.).
