@@ -27,25 +27,18 @@ There are two APIs being accessed within this app. The first is [ZipCodeAPI](htt
 
 ### Instructions for downloading the code and running it on localhost
 
-### Credits
-- Icons:
-	- Created by Dinosoft Labs, from Noun Project
-	- vagina by Hea Poh Lin from the Noun Project
-	- Checklist by ProSymbols from the Noun Project
-	- Doctor by dDara from the Noun Project
-	- Heart by Vicons Design from the Noun Project
-	- Syringe by Gregor Cresnar from the Noun Project
-	- Pregnant by BomSymbols from the Noun Project
-	- boobs by Gregor Cresnar from the Noun Project
+### Credits + Sources
+Sources for medical guidance for each service:
+- https://www.womenshealth.gov/pregnancy/youre-pregnant-now-what/prenatal-care-and-tests
+- https://www.cdc.gov/hpv/parents/vaccine.html
+- https://www.cdc.gov/std/prevention/screeningreccs.htm
+- https://www.prevention.com/health/9-most-important-medical-tests-for-women/slide/3
 
-
-Preganancy:
-https://www.womenshealth.gov/pregnancy/youre-pregnant-now-what/prenatal-care-and-tests
-
-HPV:
-https://www.cdc.gov/hpv/parents/vaccine.html
-
-STD:
-https://www.cdc.gov/std/prevention/screeningreccs.htm
-
-https://www.prevention.com/health/9-most-important-medical-tests-for-women/slide/3
+Icons:
+- Checklist by ProSymbols from the Noun Project
+- Syringe by Gregor Cresnar from the Noun Project
+- Vagina by Hea Poh Lin from the Noun Project
+- Heart by Vicons Design from the Noun Project
+- Pregnant by BomSymbols from the Noun Project
+- Boobs by Gregor Cresnar from the Noun Project
+- Doctor by dDara from the Noun Project
