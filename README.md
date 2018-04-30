@@ -24,10 +24,25 @@ This app is designed as an informational resource/reminder checklist/medical his
 ### Technologies Used
 - This is an express app built using Node and Mongoose.
 - This app is deployed on Heroku and utilizes a Mongo database to store the data.
-- Each web page was designed using EJS, CSS, and JavaScript.
+- Each web page was designed using EJS, CSS, JavaScript, JQuery, and bootstrap (it is also optimized for mobile).
 - The database is structured with two models - one for the User, and another Service model embedded within the User.
 - The full range of CRUD methods is used: Creating a user as well as service(s) for that user; delete a service off the user's records; and update the user's zipcode in the database.
 - The app also includes two APIs (see below).
+
+| Route        | Type           | Description  |
+| ------------- |:-------------:| -----:|
+| app.get('/') | GET | Renders landing page|
+| router.get('/signup'   | GET      |   Renders sign up page |
+| router.post('/signup'   | POST      |   Creates a new user |
+| router.get('/login'   | GET      |   Renders log in page |
+| router.post('/login'   | POST      |   Logs a user into their account |
+| router.get('/myservices'   | GET      |   Renders Add Service page |
+| router.post('/myservices'   | POST      |   Adds a service to the user's records |
+| router.get('/find'   | GET      |   Renders Find Dr page |
+| router.put('/find'   | PUT      |   Updates user's zip code |
+| router.get('/records'   | GET      |   Renders My Records page |
+| router.delete('/records'   | DELETE      |   Deletes a record from the user's account |
+| router.get('/logout'   | GET      |   Logs a user out |
 
 
 ### APIs used + descriptions
@@ -68,6 +83,8 @@ The following code adds a specific service to the user's records:
 - Birth year is a property requested from the user upon sign up, however it is not being used right now. Ideally, I would like the Add Services page to populate possible services based on the age (E.g. a 21 year old would not see the Mammogram option, etc.).
 - On the Add Services page, I would like to make it so that the modal form closes once the `Save NameOfService Info` button is clicked.
 - Because different exams/tests are required at different increments (E.g. annually vs. once every every 3-5 years), I would like the app to be able to send reminders (via email) once it knows that the person is overdue for a specific service based on their records of that service (or lack thereof).
+- I would like to find and add another API that includes insurance coverage, so that the Find page not only lists the doctors, but also includes what insurance plans their services are covered by.
+- I would like to add a map to the Find page so that the user can visibly see the locations of each doctor result.
 
 ### Credits + Sources
 Sources for medical guidance for each service:
