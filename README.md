@@ -89,7 +89,9 @@ The following code finds doctors based on your zipcode provided at sign up:
             res.render("find", {doctors: doctors});
         });
     });
-});```
+});
+```
+
 
 ### Future fixes/features
 - Birth year is a property requested from the user upon sign up, however it is not being used right now. Ideally, I would like the Add Services page to populate possible services based on the age (E.g. a 21 year old would not see the Mammogram option, etc.).
